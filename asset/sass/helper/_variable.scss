@@ -1,0 +1,19 @@
+//color
+$color-dark: #000000;
+$color-white: #fff;
+
+//font size 
+$fs-1: 20px;
+$fs-2: 40px;
+
+//font weight
+$fw-1: 300;
+$fw-2: 400;
+
+//break points
+$breakPoints: (
+    "extra-large" : 1200px,
+    "large" : 992px,
+    "medium" : 768px,
+    "small" : 576px
+);

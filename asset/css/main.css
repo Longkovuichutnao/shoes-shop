@@ -1,1 +1,54 @@
-/*# sourceMappingURL=main.css.map */
+/*
+    Function to set font weight, font-size, color for text
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Inter Tight", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+header .row {
+  height: 100px;
+  align-items: center;
+}
+header .row .header-logo a {
+  text-decoration: none;
+}
+header .row .header-logo a h1 {
+  color: #000000;
+  font-size: 35px;
+  font-weight: 400;
+}
+header .row .title-type .row {
+  text-align: center;
+}
+header .row .title-type .row a {
+  color: #000000;
+  text-decoration: none;
+  padding: 0 15px;
+  font-weight: 700;
+}
+header .row .header-elements .icon-elements .ip-search {
+  width: 150px;
+  position: relative;
+  background-color: #eceff1;
+  margin-right: 30px;
+}
+header .row .header-elements .icon-elements #icon-search {
+  position: absolute;
+  transform: translateX(120px);
+  color: #000000;
+  font-size: 15px;
+}
+header .row .header-elements .icon-elements #icon-listWish {
+  margin: 0 20px;
+}
+header .row .header-elements .icon-elements i {
+  font-size: 20px;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */

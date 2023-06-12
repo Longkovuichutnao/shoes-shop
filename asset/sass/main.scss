@@ -1,9 +1,17 @@
-//helper
-@import "./helper/variable";
-@import "./helper/mixin";
+//Base
+@import "./Base/reset";
+@import "./Base/responsive";
 
-//base
-@import "./base/reset";
+//Helper
+@import "./Helper/variables";
+@import "./Helper/minxin";
 
-//layouts
-@import "./layouts/header";
+//Components
+@import "./Components/button";
+
+//Layouts
+@import "./Layouts/header";
+@import "./Layouts/carousel";
+@import "./Layouts/product";
+
+//Pages

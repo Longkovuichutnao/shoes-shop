@@ -1,0 +1,55 @@
+header {
+    .row {
+        height: 100px;
+        align-items: center;
+
+        .header-logo {
+            a {
+                text-decoration: none;
+                h1 {
+                    @include styleText($color-dark, 35px, $fw-2);
+                }
+            }
+        }
+
+        .title-type {
+            .row {
+                text-align: center;
+
+                a {
+                    color: $color-dark;
+                    text-decoration: none;
+                    padding: 0 15px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .header-elements {
+            .icon-elements {
+                .ip-search {
+                    width: 150px;
+                    position: relative;
+                    background-color: #eceff1;
+                    margin-right: 30px;
+                }
+
+                #icon-search {
+                    position: absolute;
+                    transform: translateX(120px);
+                    color: $color-dark;
+                    font-size: 15px;
+                }
+
+                #icon-listWish {
+                    margin: 0 20px;
+                }
+
+                i {
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

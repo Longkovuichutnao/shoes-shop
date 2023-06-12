@@ -10,7 +10,8 @@
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&family=Raleway:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- FONT AWESOME -->
@@ -23,34 +24,46 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- GLOBAL CSS -->
-    <link rel="stylesheet" href="./asset/css/global.css">
-    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/css/main.css">
 </head>
 
 <body>
     <div class="container">
         <header>
-            <div class="header-top d-flex justify-content-between">
-                <div class="logo-cyber">
-                    <img src="./asset/img/logo-CyberSoft.png" alt="logo-cyberSoft">
+            <div class="row">
+                <!-- logo -->
+                <div class="col-4 header-logo">
+                    <a href="#">
+                        <h1>CYBER SOFT</h1>
+                    </a>
                 </div>
-                <div class="header-top-contents d-flex">
-                    <!-- button search -->
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    <button type="button">Search</button>
-                    <!-- icon  wish list-->
-                    <i class="fa-solid fa-heart"></i>
-                    <!-- icon cart -->
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <!-- icon logIn -->
-                    <i class="fa-solid fa-user"></i>
+                <div class="col-lg-4 title-type">
+                    <!-- title header -->
+                    <div class="row">
+                        <a href=""><span>MEN</span></a>
+                        <a href=""><span>WOMEN</span></a>
+                        <a href="">KIDS</a>
+                        <a href="">SPORTS</a>
+                    </div>
+                </div>
+                <div class="col-4 d-flex justify-content-center header-elements">
+                    <div class="row icon-elements">
+                        <!-- icon header -->
+                        <input class="form-control ip-search" placeholder="Search">
+                        <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
+                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-heart" id="icon-listWish"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
                 </div>
             </div>
-            <div class="header-bottom"></div>
         </header>
+
     </div>
-    
-    
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -60,6 +73,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <!-- thư viện  axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
     <script src="./controller/Main.js"></script>
 </body>
 

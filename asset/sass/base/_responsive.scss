@@ -1,0 +1,1 @@
+//chỉnh responsive chung cả web

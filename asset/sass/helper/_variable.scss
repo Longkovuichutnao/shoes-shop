@@ -1,15 +1,56 @@
+//===========> Khai báo biến
+
 //color
-$color-dark: #000000;
+$color-black: #000;
 $color-white: #fff;
 
+$color-dark-1: #656774;
+$color-dark-2:#121212;
+$color-dark-3:#353536;
+
+$color-blue-1: #1d365e;
+$color-blue-2: #2a73dd;
+$color-blue-3:#2196f3;
+
+$color-btn-1: #F8B653;
+$color-btn-2: #E1B067;
+
+$color-price: #DEDDDC;
+
 //font size 
-$fs-1: 20px;
-$fs-2: 40px;
+$fs-12: 12px;
+$fs-13: 13px;
+$fs-14: 14px;
+$fs-15: 15px;
+$fs-18: 18px;
+$fs-20: 20px;
 
 //font weight
-$fw-1: 300;
-$fw-2: 400;
-$fw-3: 700;
+$fw-3: 300;
+$fw-4: 400;
+$fw-5: 500;
+$fw-7: 700;
+$fw-8: 800;
+
+//pixel - dùng padding & margin, cộng thêm nếu lẻ
+$px-5: 5px;
+$px-10: 10px;
+$px-15: 15px;
+$px-20: 20px;
+$px-30: 30px;
+$px-40: 40px;
+$px-50: 50px;
+
+//border
+$bd-1: 1px;
+$bd-2: 2px;
+$bd-3: 4px;
+$bd-4: 5px;
+
+//width
+$w-50: 50%;
+$w-100: 100%;
+
 
 
 //break points

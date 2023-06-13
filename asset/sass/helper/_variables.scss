@@ -3,15 +3,17 @@
 //color
 $color-black: #000;
 $color-white: #fff;
+$color-gray: #f5f5f5;
 
 $color-dark-1: #656774;
-$color-dark-2:#121212;
-$color-dark-3:#353536;
+$color-dark-2: #121212;
+$color-dark-3: #353535;
 
 $color-blue-1: #1d365e;
 $color-blue-2: #2a73dd;
-$color-blue-3:#2196f3;
+$color-blue-3: #2196f3;
 
+$color-img: #eceff1;
 $color-btn-1: #F8B653;
 $color-btn-2: #E1B067;
 
@@ -24,8 +26,10 @@ $fs-14: 14px;
 $fs-15: 15px;
 $fs-18: 18px;
 $fs-20: 20px;
+$fs-25: 25px;
+$fs-30: 30px;
 
-//font weight
+//font weight   
 $fw-3: 300;
 $fw-4: 400;
 $fw-5: 500;
@@ -37,15 +41,22 @@ $px-5: 5px;
 $px-10: 10px;
 $px-15: 15px;
 $px-20: 20px;
+$px-25: 25px;
 $px-30: 30px;
 $px-40: 40px;
 $px-50: 50px;
+$px-60: 60px;
+$px-70: 70px;
 
 //border
 $bd-1: 1px;
 $bd-2: 2px;
-$bd-3: 4px;
-$bd-4: 5px;
+$bd-3: 3px;
+$bd-4: 4px;
+$bd-5: 5px;
+$bd-8: 8px;
+$bd-10: 10px;
+
 
 //width
 $w-50: 50%;

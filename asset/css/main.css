@@ -1,6 +1,3 @@
-/*
-    Function to set font weight, font-size, color for text
-*/
 * {
   padding: 0;
   margin: 0;
@@ -12,6 +9,9 @@ html, body {
   font-family: "Raleway", sans-serif;
 }
 
+/*
+    Function to set font weight, font-size, color for text
+*/
 header .row {
   height: 100px;
   align-items: center;
@@ -20,15 +20,15 @@ header .row .header-logo a {
   text-decoration: none;
 }
 header .row .header-logo a h1 {
-  color: #000000;
+  color: #121212;
   font-size: 35px;
-  font-weight: 400;
+  font-weight: 300;
 }
 header .row .title-type .row {
   text-align: center;
 }
 header .row .title-type .row a {
-  color: #000000;
+  color: #121212;
   text-decoration: none;
   padding: 0 15px;
   font-weight: 700;
@@ -42,7 +42,7 @@ header .row .header-elements .icon-elements .ip-search {
 header .row .header-elements .icon-elements #icon-search {
   position: absolute;
   transform: translateX(120px);
-  color: #000000;
+  color: #121212;
   font-size: 15px;
 }
 header .row .header-elements .icon-elements #icon-listWish {
@@ -51,4 +51,68 @@ header .row .header-elements .icon-elements #icon-listWish {
 header .row .header-elements .icon-elements i {
   font-size: 20px;
   cursor: pointer;
+}
+
+.product .title {
+  color: #353535;
+  font-size: 25px;
+  font-weight: 400;
+  padding: 20px 0;
+}
+.product .card-item {
+  padding-bottom: 25px;
+}
+.product .card-item-inner {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0 5px 10px 0px rgba(100, 100, 111, 0.2);
+  overflow: hidden;
+  transition: 0.5s;
+}
+.product .card-item-inner:hover {
+  border-color: #000;
+  box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.3);
+}
+.product .card-img {
+  background-color: #eceff1;
+  border-radius: 0;
+}
+.product .card-body {
+  padding-bottom: 0;
+}
+.product .shoe-name {
+  color: #353535;
+  font-size: 18px;
+  font-weight: 700;
+}
+.product .shoe-desc {
+  color: #656774;
+  font-size: 15px;
+  font-weight: 400;
+}
+.product .card-buy,
+.product .card-price {
+  width: 50%;
+  text-align: center;
+  background: #f5f5f5;
+  color: #000;
+  padding: 15px 25px;
+  border-radius: 0;
+  transition: 0.5s;
+}
+.product .card-buy:hover,
+.product .card-price:hover {
+  font-size: 18px;
+  font-weight: 700;
+}
+.product .card-buy {
+  background-image: linear-gradient(to right, #eacda3 0%, #d6ae7b 51%, #eacda3 100%);
+  background-size: 200% auto;
+  border-radius: 0 0 10px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.product .card-buy:hover {
+  background-position: right center;
 }/*# sourceMappingURL=main.css.map */

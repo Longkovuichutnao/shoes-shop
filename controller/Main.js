@@ -21,25 +21,26 @@ function hienThiDanhSach(mang) {
         let shoeInfo = `
         <div class="card-item col-4">
             <div class="card-item-inner">
-            <div class="card-img">
-                <a href="#">
-                    <img class="img-fluid" src= ${shoe.image} alt="">
-                </a>
-            </div>
-            <div class="card-content">
-                <h5 class="shoe-name">${shoe.name}</h5>
-                <p class="shoe-desc">${shoe.description}</p>
-            </div>
-            <div class="card-more d-flex">
-                <div class="card-price">
-                            <div class="btn">${shoe.price}$</div>
+                <div class="card-img">
+                    <a href="#">
+                        <img class="img-fluid" src= ${shoe.image} alt="">
+                    </a>
                 </div>
-                <div class="card-buy">
-                    <a href="#" class="btn btn-info">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    Buy now</a>
+                <div class="card-content">
+                    <h5 class="shoe-name">${shoe.name}</h5>
+                    <p class="shoe-desc">${shoe.description}</p>
                 </div>
-            </div>
+                <div class="card-more d-flex">
+                    <div class="card-price">
+                        <div class="btn">${shoe.price}$</div>
+                    </div>
+                    <div class="card-buy">
+                        <a href="#" class="btn btn-info">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Buy now</a>
+                        <i class="fa-regular fa-heart" id="icon-interest"></i>
+                    </div>
+                </div>
             </div>
         </div> `
         list += shoeInfo;

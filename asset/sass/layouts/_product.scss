@@ -1,0 +1,18 @@
+.product {
+    .card-list {
+        .card-item {
+            .card-more  {
+                #icon-interest {
+                    cursor: pointer;
+                    margin-left: 120px;
+                    font-size: 20px;
+                    color: rgb(165 42 42 / 80%);
+                    transition: all 0.5s;
+                    &:hover {
+                        font-weight: 700;
+                    } 
+                }
+            }
+        }
+    }
+}

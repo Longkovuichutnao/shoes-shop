@@ -7,7 +7,7 @@ header {
             a {
                 text-decoration: none;
                 h1 {
-                    @include styleText($color-dark, 35px, $fw-2);
+                    @include styleText($color-dark-2, 35px, $fw-3);
                 }
             }
         }
@@ -17,7 +17,7 @@ header {
                 text-align: center;
 
                 a {
-                    color: $color-dark;
+                    color: $color-dark-2;
                     text-decoration: none;
                     padding: 0 15px;
                     font-weight: 700;
@@ -37,7 +37,7 @@ header {
                 #icon-search {
                     position: absolute;
                     transform: translateX(120px);
-                    color: $color-dark;
+                    color: $color-dark-2;
                     font-size: 15px;
                 }
 
@@ -50,6 +50,6 @@ header {
                     cursor: pointer;
                 }
             }
-        }
+        }  
     }
 }

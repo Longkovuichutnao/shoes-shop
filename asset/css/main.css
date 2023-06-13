@@ -1,6 +1,3 @@
-/*
-    Function to set font weight, font-size, color for text
-*/
 * {
   padding: 0;
   margin: 0;
@@ -9,9 +6,11 @@
 
 html, body {
   font-family: "Nunito Sans", sans-serif;
-  font-family: "Raleway", sans-serif;
 }
 
+/*
+    Function to set font weight, font-size, color for text
+*/
 header .row {
   height: 100px;
   align-items: center;
@@ -20,15 +19,15 @@ header .row .header-logo a {
   text-decoration: none;
 }
 header .row .header-logo a h1 {
-  color: #000000;
+  color: #121212;
   font-size: 35px;
-  font-weight: 400;
+  font-weight: 300;
 }
 header .row .title-type .row {
   text-align: center;
 }
 header .row .title-type .row a {
-  color: #000000;
+  color: #121212;
   text-decoration: none;
   padding: 0 15px;
   font-weight: 700;
@@ -42,7 +41,7 @@ header .row .header-elements .icon-elements .ip-search {
 header .row .header-elements .icon-elements #icon-search {
   position: absolute;
   transform: translateX(120px);
-  color: #000000;
+  color: #121212;
   font-size: 15px;
 }
 header .row .header-elements .icon-elements #icon-listWish {
@@ -51,4 +50,15 @@ header .row .header-elements .icon-elements #icon-listWish {
 header .row .header-elements .icon-elements i {
   font-size: 20px;
   cursor: pointer;
+}
+
+.product .card-list .card-item .card-more #icon-interest {
+  cursor: pointer;
+  margin-left: 120px;
+  font-size: 20px;
+  color: rgba(165, 42, 42, 0.8);
+  transition: all 0.5s;
+}
+.product .card-list .card-item .card-more #icon-interest:hover {
+  font-weight: 700;
 }/*# sourceMappingURL=main.css.map */

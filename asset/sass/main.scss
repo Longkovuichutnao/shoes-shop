@@ -3,15 +3,15 @@
 @import "./Base/responsive";
 
 //Helper
-@import "./Helper/variables";
-@import "./Helper/minxin";
+@import "./Helper/variable";
+@import "./Helper/mixin";
 
 //Components
-@import "./Components/button";
+// @import "./Components/button";
 
 //Layouts
 @import "./Layouts/header";
-@import "./Layouts/carousel";
+// @import "./Layouts/carousel";
 @import "./Layouts/product";
 
 //Pages

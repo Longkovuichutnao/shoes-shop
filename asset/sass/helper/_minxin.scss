@@ -6,3 +6,10 @@
     font-size: $font-size;
     font-weight: $font-weight;
 }
+
+@mixin styleButton($bg, $color, $pd, $pd2, $radius) {
+    background: $bg;
+    color: $color;
+    padding: $pd $pd2;
+    border-radius: $radius;
+}

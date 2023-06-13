@@ -44,6 +44,7 @@
                         <a href=""><span>WOMEN</span></a>
                         <a href="">KIDS</a>
                         <a href="">SPORTS</a>
+
                     </div>
                 </div>
                 <div class="col-4 d-flex justify-content-center header-elements">
@@ -64,26 +65,31 @@
     <!-- PRODUCT -->
     <section class="product">
         <div class="container">
-            <h3 class="text-center">-Product Feature -</h3>
+            <h3 class="title">PRODUCT CATEGORY</h3>
             <div class="card-list row">
                 <!-- <div class="card-item col-4">
-                    <div class="card-img">
-                        <img src="./asset/img/shoes-1.jpg" class="card-img-top" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h5 class="shoe-name">Adidas Prophere Customize</h5>
-                        <p class="shoe-desc">The midsole contains 20% more Boost for an amplified Boost feeling</p>
-                    </div>
-                    <div class="card-more d-flex">
-                        <div class="card-price">
-                            <div class="btn">$375.00</div>
-                        </div>
-                        <div class="card-buy">
-                            <a href="#" class="btn btn-info">Buy now</a>
-                        </div>
-                    </div>
-                </div> -->
-
+            <div class="card-item-inner">
+            <div class="card-img">
+                <a href="#">
+                    <img class="img-fluid" src= ${shoe.image} alt="">
+                </a>
+            </div>
+            <div class="card-body">
+                <h5 class="shoe-name">${shoe.name}</h5>
+                <p class="shoe-desc">${shoe.description}</p>
+            </div>
+            <div class="card-more d-flex">
+                <div class="card-price">
+                    <div class="price">${shoe.price}$</div>
+                </div>
+                <div class="card-buy">
+                    <a href="#" class="btn-buynow">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Buy now</a>
+                </div>
+            </div>
+            </div>
+        </div> -->
             </div>
         </div>
     </section>

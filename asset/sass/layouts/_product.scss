@@ -1,0 +1,77 @@
+.product {
+    // background-color: $color-gray;
+
+    .title {
+        @include styleText($color-dark-3, $fs-25, $fw-4);
+        padding: $px-20 0;
+    }
+
+    .card-item {
+        padding-bottom: $px-25;
+    }
+
+    .card-item-inner {
+        background-color: $color-white;
+        border-radius: $bd-10;
+
+        border: 1px solid rgba(0, 0, 0, .125);
+        box-shadow: 0 5px 10px 0px rgba(100, 100, 111, 0.2);
+
+        overflow: hidden;
+        transition: 0.5s;
+
+        &:hover {
+            border-color: $color-black;
+            box-shadow: 0 0px 15px 0px rgb(0 0 0 / 30%);
+
+        }
+    }
+
+    .card-img {
+        background-color: $color-img;
+        border-radius: 0;
+    }
+
+    .card-body {
+        padding-bottom: 0;
+    }
+
+    .shoe-name {
+        @include styleText($color-dark-3, $fs-18, $fw-7);
+    }
+
+    .shoe-desc {
+        @include styleText($color-dark-1, $fs-15, $fw-4);
+    }
+
+    .card-buy,
+    .card-price {
+        width: 50%;
+        text-align: center;
+        @include styleButton($color-gray, $color-black , $px-15, $px-25, 0);
+        transition: 0.5s;
+
+        &:hover {
+            font-size: $fs-18;
+            font-weight: $fw-7;
+        }
+    }
+
+    .card-buy {
+        background-image: linear-gradient(to right, #eacda3 0%, #d6ae7b 51%, #eacda3 100%);
+        background-size: 200% auto;
+        border-radius: 0 0 10px;
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, .125);
+
+        &:hover {
+            background-position: right center;
+        }
+    }
+
+
+
+
+
+
+}

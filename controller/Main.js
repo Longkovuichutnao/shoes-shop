@@ -1,4 +1,3 @@
-
 // Lấy list danh sách trang index 
 function layDanhSach() {
     axios({

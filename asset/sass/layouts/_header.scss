@@ -6,22 +6,33 @@ header {
         .header-logo {
             a {
                 text-decoration: none;
-
-                h1 {
-                    @include styleText($color-dark-2, $fs-30+5, $fw-3);
+                img {
+                    height: 70px;
                 }
             }
         }
 
         .title-type {
             .row {
-                text-align: center;
-
+                list-style: none;
                 a {
-                    color: $color-dark-2;
+                    color: $color-black;
                     text-decoration: none;
-                    padding: 0 15px;
-                    font-weight: 700;
+                }
+                li {
+                    &::after {
+                        content: "";
+                        width: 100px;
+                        height: 2px;
+                        display: none;
+                        background-color: $color-black;
+                        transform: scaleX(1);
+                    }
+                    &:hover {
+                        &::after {
+                            display: block;
+                        }
+                    }
                 }
             }
         }

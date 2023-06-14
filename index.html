@@ -1,18 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Shoes shop</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- GOOGLE FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&family=Raleway:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -21,11 +21,13 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
     <!-- GLOBAL CSS -->
-    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="./asset/css/main.css" />
 </head>
+<button class="btn btn-primary" id="test" data-toggle="modal" data-target="#modalLogin">
+    Thêm nhân viên</button>
 
 <body>
     <div class="container">
@@ -44,13 +46,12 @@
                         <a href=""><span>WOMEN</span></a>
                         <a href="">KIDS</a>
                         <a href="">SPORTS</a>
-
                     </div>
                 </div>
                 <div class="col-4 d-flex justify-content-center header-elements">
                     <div class="row icon-elements">
                         <!-- icon header -->
-                        <input class="form-control ip-search" placeholder="Search">
+                        <input class="form-control ip-search" placeholder="Search" />
                         <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
                         <i class="fa-solid fa-user"></i>
                         <i class="fa-solid fa-heart" id="icon-listWish"></i>
@@ -59,7 +60,6 @@
                 </div>
             </div>
         </header>
-
     </div>
     <section class="product">
         <div class="container">
@@ -77,10 +77,10 @@
                 <p class="shoe-desc">${shoe.description}</p>
             </div>
             <div class="card-more d-flex">
-                <div class="card-price">
+                <div class="btn-price">
                     <div class="price">${shoe.price}$</div>
                 </div>
-                <div class="card-buy">
+                <div class="btn-buy">
                     <a href="#" class="btn-buynow">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Buy now</a>
@@ -88,10 +88,101 @@
             </div>
             </div>
         </div> -->
-
             </div>
-
         </div>
+
+        <!-- The Modal Login -->
+        <section class="modal fade" id="modalLogin">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-title container mt-3">
+                        <div class="row">
+                            <h4 class="col-6 text-center">Log In</h4>
+                            <h4 class="col-6 text-center">Register</h4>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                    </div>
+                                    <input type="email" name="email" id="email" class="form-control input-sm"
+                                        placeholder="Email" />
+                                </div>
+                                <span class="sp-thongbao" id="tbEmail"></span>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                    </div>
+                                    <input type="password" name="password" id="password" class="form-control input-sm"
+                                        placeholder="Password" />
+                                </div>
+                                <span class="sp-thongbao" id="tbPassword"></span>
+                            </div>
+                            <div class="form-group d-register">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                    </div>
+                                    <input type="password" name="password" id="password2" class="form-control input-sm"
+                                        placeholder="Password confirm" />
+                                </div>
+                                <span class="sp-thongbao" id="tbPassword2"></span>
+                            </div>
+                            <div class="form-group d-register">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-address-book"></i></span>
+                                    </div>
+                                    <input type="name" name="tk" id="name" class="form-control input-sm"
+                                        placeholder="Name" />
+                                </div>
+                                <span class="sp-thongbao" id="tbName"></span>
+                            </div>
+                            <div class="form-group d-register">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                                    </div>
+                                    <input type="number" name="phone" id="phone" class="form-control input-sm"
+                                        placeholder="Phone" />
+                                </div>
+                                <span class="sp-thongbao" id="tbPhone"></span>
+                            </div>
+                            <div class="form-group d-register">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                    </div>
+                                    <!-- label padding + margin -->
+                                    <div class="input-group-prepend gender">
+                                        <p>Gender:</p>
+                                        <input type="radio" id="Male" name="gender" value="true" />
+                                        <label for="Male">Male</label>
+                                        <input type="radio" id="Female" name="gender" value="false" />
+                                        <label for="Female">Female</label>
+                                    </div>
+                                </div>
+                                <span class="sp-thongbao" id="tbGender"></span>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer justify-content-between" id="modal-footer">
+                        <button id="exit" type="button" class="btn btn-danger" data-dismiss="modal">
+                            Exit</button>
+                        <button id="submit" type="button" class="btn btn-info d-none">
+                            Submit</button>
+                        <button id="login" type="button" class="btn btn-info">
+                            Log In</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

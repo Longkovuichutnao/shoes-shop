@@ -1,0 +1,28 @@
+.product {
+
+    .btn-buy,
+    .btn-price {
+        width: 50%;
+        text-align: center;
+        @include styleButton($color-gray, $color-black , $px-15, $px-25, 0);
+        transition: 0.5s;
+
+        &:hover {
+            font-size: $fs-18;
+            font-weight: $fw-7;
+        }
+    }
+
+    .btn-buy {
+        background-image: linear-gradient(to right, #eacda3 0%, #d6ae7b 51%, #eacda3 100%);
+        background-size: 200% auto;
+        border-radius: 0 0 10px;
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, .125);
+
+        &:hover {
+            background-position: right center;
+        }
+
+    }
+}

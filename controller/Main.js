@@ -39,10 +39,10 @@ function hienThiDanhSach(mang) {
                 <p class="shoe-desc">${shortDesc}.......</p>
             </div>
             <div class="card-more d-flex">
-                <div class="card-price">
+                <div class="btn-price">
                     <div class="price">${shoe.price}$</div>
                 </div>
-                <div class="card-buy">
+                <div class="btn-buy">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Buy now
                 </div>

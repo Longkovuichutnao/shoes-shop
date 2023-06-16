@@ -1,1 +1,10 @@
 //chỉnh responsive chung cả web
+//break points
+$breakPoints: (
+    "extra-large" : 1200px,
+    "large" : 992px,
+    "medium" : 768px,
+    "small" : 576px
+);
+
+// RESPONSIVE HEADER

@@ -1,0 +1,39 @@
+.carousel {
+    .title-summer-carousel {
+        position: absolute;
+        top: 250px;
+        left: 200px;
+        z-index: 1;
+        h2 {
+            font-size: 70px;
+            font-weight: 700;
+            color: $color-blue-1;
+        }
+    }
+    .title-content-carousel {
+        position: absolute;
+        z-index: 1;
+        top: 350px;
+        left: 200px;
+        p {
+            font-size: 25px;
+            font-weight: 300;
+            color: $color-blue-1;
+        }
+    }
+    .img-first {
+        position: relative;
+        height: 100vh;
+    }
+    .carousel-img {
+        img {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    
+}

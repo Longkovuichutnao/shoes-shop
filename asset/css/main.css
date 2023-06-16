@@ -66,19 +66,26 @@ header .row {
 header .row .header-logo a {
   text-decoration: none;
 }
-header .row .header-logo a h1 {
-  color: #121212;
-  font-size: 35px;
-  font-weight: 300;
+header .row .header-logo a img {
+  height: 70px;
 }
 header .row .title-type .row {
-  text-align: center;
+  list-style: none;
 }
 header .row .title-type .row a {
-  color: #121212;
+  color: #000;
   text-decoration: none;
-  padding: 0 15px;
-  font-weight: 700;
+}
+header .row .title-type .row li::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  display: none;
+  background-color: #000;
+  transform: scaleX(1);
+}
+header .row .title-type .row li:hover::after {
+  display: block;
 }
 header .row .header-elements .icon-elements .ip-search {
   width: 150px;
@@ -98,6 +105,41 @@ header .row .header-elements .icon-elements #icon-listWish {
 header .row .header-elements .icon-elements i {
   font-size: 20px;
   cursor: pointer;
+}
+
+.carousel .title-summer-carousel {
+  position: absolute;
+  top: 250px;
+  left: 200px;
+  z-index: 1;
+}
+.carousel .title-summer-carousel h2 {
+  font-size: 70px;
+  font-weight: 700;
+  color: #1d365e;
+}
+.carousel .title-content-carousel {
+  position: absolute;
+  z-index: 1;
+  top: 350px;
+  left: 200px;
+}
+.carousel .title-content-carousel p {
+  font-size: 25px;
+  font-weight: 300;
+  color: #1d365e;
+}
+.carousel .img-first {
+  position: relative;
+  height: 100vh;
+}
+.carousel .carousel-img img {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  object-fit: cover;
 }
 
 .product .title {
@@ -137,4 +179,5 @@ header .row .header-elements .icon-elements i {
   color: #656774;
   font-size: 15px;
   font-weight: 400;
-}/*# sourceMappingURL=main.css.map */
+}
+/*# sourceMappingURL=main.css.map */

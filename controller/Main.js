@@ -5,7 +5,6 @@ function layDanhSach() {
         url: 'https://shop.cyberlearn.vn/api/Product',
 
     }).then(function (result) {
-        // console.log(result.data.content)
         hienThiDanhSach(result.data.content);
     }).catch(function (error) {
         console.log(error);
@@ -13,17 +12,14 @@ function layDanhSach() {
 
 }
 layDanhSach();
-// console.log('ok')
 function hienThiDanhSach(mang) {
     let list = "";
     mang.map(function (shoe, index) {
         let arrDesc = shoe.description.split(" ");
-        // console.log(arrDesc);
         let shortDesc = ""
         for (let i = 0; i < 12; i++) {
             shortDesc += arrDesc[i] + " "
         }
-        console.log(shortDesc);
 
         let shoeInfo = `
         <div class="card-item col-4">
@@ -38,10 +34,10 @@ function hienThiDanhSach(mang) {
                 <p class="shoe-desc">${shortDesc}.......</p>
             </div>
             <div class="card-more d-flex">
-                <div class="card-price">
+                <div class="btn-price">
                     <div class="price">${shoe.price}$</div>
                 </div>
-                <div class="card-buy">
+                <div class="btn-buy">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Buy now
                 </div>

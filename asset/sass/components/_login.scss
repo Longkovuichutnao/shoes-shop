@@ -1,0 +1,39 @@
+#modalLogin {
+    .modal-title .row {
+        align-items: center;
+    }
+
+    .login {
+        border-right: 1px solid #ced4da;
+        @include styleText($color-blue-2, $fs-25+5, $fw-7)
+    }
+
+    .login,
+    .regis {
+        &:hover {
+            cursor: pointer;
+            color: $color-blue-2;
+        }
+    }
+
+    .gender {
+        border-radius: $bd-4;
+        padding: $px-5+1 $px-10+2;
+        border: 1px solid #ced4da;
+
+        flex-grow: 1;
+        align-items: center;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+}

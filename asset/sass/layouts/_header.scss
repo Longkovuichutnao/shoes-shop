@@ -16,17 +16,15 @@ header {
             .row {
                 list-style: none;
                 a {
-                    color: $color-black;
-                    text-decoration: none;
+                    @include styleTagA(none, $color-black, $fs-15);
                 }
                 li {
                     &::after {
                         content: "";
-                        width: 100px;
+                        width: 100;
                         height: 2px;
                         display: none;
                         background-color: $color-black;
-                        transform: scaleX(1);
                     }
                     &:hover {
                         &::after {
@@ -40,7 +38,7 @@ header {
         .header-elements {
             .icon-elements {
                 .ip-search {
-                    width: 150px;
+                    width: 250px;
                     position: relative;
                     background-color: #eceff1;
                     margin-right: 30px;
@@ -48,20 +46,18 @@ header {
 
                 #icon-search {
                     position: absolute;
-                    transform: translateX(120px);
+                    transform: translateX(220px);
                     color: $color-dark-2;
                     font-size: 15px;
-                }
-
-                #icon-listWish {
-                    margin: 0 20px;
-                }
-
-                i {
-                    font-size: 20px;
                     cursor: pointer;
                 }
+                a {
+                    @include styleTagA(none, $color-black, $fs-20);
+                    &:hover {
+                        color: rgba(0, 0, 0, 0.603);
+                    }
+                }
             }
-        }  
+        }
     }
 }

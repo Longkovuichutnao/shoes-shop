@@ -6,7 +6,6 @@
 
 html, body {
   font-family: "Nunito Sans", sans-serif;
-  font-family: "Raleway", sans-serif;
 }
 
 /*
@@ -38,10 +37,26 @@ html, body {
   background-position: right center;
 }
 
+#modalLogin .modal-title .row {
+  align-items: center;
+}
+#modalLogin .login {
+  border-right: 1px solid #ced4da;
+  color: #2a73dd;
+  font-size: 30px;
+  font-weight: 700;
+}
+#modalLogin .login:hover,
+#modalLogin .regis:hover {
+  cursor: pointer;
+  color: #2a73dd;
+}
 #modalLogin .gender {
   border-radius: 4px;
   padding: 6px 12px;
   border: 1px solid #ced4da;
+  flex-grow: 1;
+  align-items: center;
 }
 
 header .row {

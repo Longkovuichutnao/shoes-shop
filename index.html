@@ -8,18 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- GOOGLE FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&family=Raleway:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
-
-    <!-- FONT AWESOME -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -28,8 +25,6 @@
     <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="./asset/css/main.css" />
 </head>
-<button class="btn btn-primary" id="test" data-toggle="modal" data-target="#modalLogin">
-    Thêm nhân viên</button>
 
 <body>
     <div class="container">
@@ -55,7 +50,9 @@
                         <!-- icon header -->
                         <input class="form-control ip-search" placeholder="Search" />
                         <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
-                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-solid fa-user-secret d-none"></i>
+                        <p class="mb-0 nameLogin d-none"></p>
+                        <i class="fa-solid fa-user userLogin" data-toggle="modal" data-target="#modalLogin"></i>
                         <i class="fa-solid fa-heart" id="icon-listWish"></i>
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
@@ -99,12 +96,12 @@
                 <div class="modal-content">
                     <div class="modal-title container mt-3">
                         <div class="row">
-                            <h4 class="col-6 text-center">Log In</h4>
-                            <h4 class="col-6 text-center">Register</h4>
+                            <h4 class="login col-6 text-center">Log In</h4>
+                            <h4 class="regis col-6 text-center">Register</h4>
                         </div>
                     </div>
                     <div class="modal-body">
-                        <form role="form">
+                        <form id="formUser" role="form">
                             <div class="form-group">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -125,7 +122,7 @@
                                 </div>
                                 <span class="sp-thongbao" id="tbPassword"></span>
                             </div>
-                            <div class="form-group d-register">
+                            <div class="form-group d-register d-none">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-key"></i></span>
@@ -135,7 +132,7 @@
                                 </div>
                                 <span class="sp-thongbao" id="tbPassword2"></span>
                             </div>
-                            <div class="form-group d-register">
+                            <div class="form-group d-register d-none">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-address-book"></i></span>
@@ -145,7 +142,7 @@
                                 </div>
                                 <span class="sp-thongbao" id="tbName"></span>
                             </div>
-                            <div class="form-group d-register">
+                            <div class="form-group d-register d-none">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
@@ -155,18 +152,18 @@
                                 </div>
                                 <span class="sp-thongbao" id="tbPhone"></span>
                             </div>
-                            <div class="form-group d-register">
+                            <div class="form-group d-register d-none">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-user"></i></span>
                                     </div>
                                     <!-- label padding + margin -->
                                     <div class="input-group-prepend gender">
-                                        <p>Gender:</p>
-                                        <input type="radio" id="Male" name="gender" value="true" />
-                                        <label for="Male">Male</label>
-                                        <input type="radio" id="Female" name="gender" value="false" />
-                                        <label for="Female">Female</label>
+                                        <!-- <p class="mb-0">Gender:</p> -->
+                                        <input class="mr-1" checked type="radio" id="male" name="gender"/>
+                                        <label class="mb-0 mr-3" for="male">Male</label>
+                                        <input class="mr-1" type="radio" id="female" name="gender"/>
+                                        <label class="mb-0" for="female">Female</label>
                                     </div>
                                 </div>
                                 <span class="sp-thongbao" id="tbGender"></span>
@@ -196,10 +193,13 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <!-- thư viện  axios-->
+    <!-- thư viện axios-->
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
     <script src="./model/Shoes.js"></script>
+    <script src="./model/User.js"></script>
+
+    <script src="./controller/login.js"></script>
     <script src="./controller/Main.js"></script>
 </body>
 

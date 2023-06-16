@@ -13,3 +13,9 @@
     padding: $pd $pd2;
     border-radius: $radius;
 }
+
+@mixin styleTagA ($text-decor, $color, $fs) {
+    color: $color;
+    text-decoration: $text-decor;
+    font-size: $fs;
+}

@@ -11,6 +11,54 @@ html, body {
 /*
     Function to set font weight, font-size, color for text
 */
+.product .btn-buy,
+.product .btn-price {
+  width: 50%;
+  text-align: center;
+  background: #f5f5f5;
+  color: #000;
+  padding: 15px 25px;
+  border-radius: 0;
+  transition: 0.5s;
+}
+.product .btn-buy:hover,
+.product .btn-price:hover {
+  font-size: 18px;
+  font-weight: 700;
+}
+.product .btn-buy {
+  background-image: linear-gradient(to right, #eacda3 0%, #d6ae7b 51%, #eacda3 100%);
+  background-size: 200% auto;
+  border-radius: 0 0 10px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.product .btn-buy:hover {
+  background-position: right center;
+}
+
+#modalLogin .modal-title .row {
+  align-items: center;
+}
+#modalLogin .login {
+  border-right: 1px solid #ced4da;
+  color: #2a73dd;
+  font-size: 30px;
+  font-weight: 700;
+}
+#modalLogin .login:hover,
+#modalLogin .regis:hover {
+  cursor: pointer;
+  color: #2a73dd;
+}
+#modalLogin .gender {
+  border-radius: 4px;
+  padding: 6px 12px;
+  border: 1px solid #ced4da;
+  flex-grow: 1;
+  align-items: center;
+}
+
 header .row {
   height: 100px;
   align-items: center;
@@ -132,47 +180,4 @@ header .row .header-elements .icon-elements i {
   font-size: 15px;
   font-weight: 400;
 }
-.product .card-buy,
-.product .card-price {
-  width: 50%;
-  text-align: center;
-  background: #f5f5f5;
-  color: #000;
-  padding: 15px 25px;
-  border-radius: 0;
-  transition: 0.5s;
-}
-.product .card-buy:hover,
-.product .card-price:hover {
-  font-size: 18px;
-  font-weight: 700;
-}
-.product .card-buy {
-  background-image: linear-gradient(to right, #eacda3 0%, #d6ae7b 51%, #eacda3 100%);
-  background-size: 200% auto;
-  border-radius: 0 0 10px;
-  cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-}
-.product .card-buy:hover {
-  background-position: right center;
-}
-
-footer {
-  background-color: #000;
-  height: 50px;
-}
-footer p {
-  font-size: 20px;
-  align-items: center;
-  color: #f5f5f5;
-  line-height: 50px;
-}
-footer p a {
-  color: #F8B653;
-  transition: all 0.5s;
-}
-footer p a:hover {
-  color: rgba(255, 255, 0, 0.404);
-  text-decoration: none;
-}/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */

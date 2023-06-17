@@ -16,7 +16,7 @@ header {
             .row {
                 list-style: none;
                 a {
-                    @include styleTagA(none, $color-black, $fs-15);
+                    @include styleTagA(none, $color-black, $fs-15+3);
                 }
                 li {
                     &::after {
@@ -57,6 +57,12 @@ header {
                         color: rgba(0, 0, 0, 0.603);
                     }
                 }
+                .fa-user-secret,.fa-cart-shopping,.nameLogin{
+                    font-size: $px-15+3;
+                    padding-right: $px-10;
+                }
+
+
             }
         }
     }

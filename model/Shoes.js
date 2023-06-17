@@ -1,5 +1,5 @@
 //Khai báo Class
-function Shoe(id, name, price, desc, size, shortDesc, quantity, related,image) {
+function Shoes(id, name, price, desc, size, shortDesc, quantity, related,image) {
     //thuộc tính
     this.id = id;
     this.name = name;

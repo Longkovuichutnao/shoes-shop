@@ -1,4 +1,6 @@
-// Lấy list danh sách trang index 
+
+
+// Lấy list danh sách trang index =================
 function layDanhSach() {
     axios({
         method: 'get',

@@ -26,14 +26,15 @@
 
     }
 
+    #tbEmail,
+    #tbPassword,
+    #tbPassword2,
+    #tbName,
+    #tbPhone {
+        color: red;
+        margin-top: $px-10;
+        margin-bottom: -$px-5;
 
-
-
-
-
-
-
-
-
+    }
 
 }

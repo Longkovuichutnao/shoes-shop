@@ -58,6 +58,15 @@ html, body {
   flex-grow: 1;
   align-items: center;
 }
+#modalLogin #tbEmail,
+#modalLogin #tbPassword,
+#modalLogin #tbPassword2,
+#modalLogin #tbName,
+#modalLogin #tbPhone {
+  color: red;
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
 
 header .row {
   height: 100px;
@@ -75,7 +84,7 @@ header .row .title-type .row {
 header .row .title-type .row a {
   color: #000;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 18px;
 }
 header .row .title-type .row li::after {
   content: "";
@@ -107,6 +116,10 @@ header .row .header-elements .icon-elements a {
 }
 header .row .header-elements .icon-elements a:hover {
   color: rgba(0, 0, 0, 0.603);
+}
+header .row .header-elements .icon-elements .fa-user-secret, header .row .header-elements .icon-elements .fa-cart-shopping, header .row .header-elements .icon-elements .nameLogin {
+  font-size: 18px;
+  padding-right: 10px;
 }
 
 .carousel .title-summer-carousel {

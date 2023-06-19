@@ -144,6 +144,10 @@ document.getElementById('login').addEventListener("click",
     }
 );
 
+/**
+ * hàm này dùng để click exit thì nó xóa local cái email
+ * remove luôn mấy cái d-block để nó còn là d-none thôi
+ */
 document.getElementById('accept-exit').addEventListener('click', () => {
     $('#modalExit').modal('hide');
     localStorage.removeItem("userLogin");
@@ -154,6 +158,9 @@ document.getElementById('accept-exit').addEventListener('click', () => {
     document.querySelector('.exit-acc').classList.remove('d-block');
 });
 
+/**
+ * xử lý trường hợp load mà mất acc
+ */
 window.addEventListener('load', () => {
     let checkLogin = localStorage.getItem("userLogin");
     if (checkLogin != null) {

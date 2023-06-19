@@ -104,7 +104,7 @@ document.getElementById('submit').addEventListener("click",
             })
         }
     }
-)
+);
 
 //Login User =======================================================
 document.getElementById('login').addEventListener("click",
@@ -142,7 +142,17 @@ document.getElementById('login').addEventListener("click",
             });
         };
     }
-)
+);
+
+document.getElementById('accept-exit').addEventListener('click', () => {
+    $('#modalExit').modal('hide');
+    localStorage.removeItem("userLogin");
+    document.querySelector('.popupLogin').style.display = 'block';
+    document.querySelector('.popupRegis').style.display = 'block';
+    document.querySelector('.fa-user-secret').classList.remove('d-block');
+    document.querySelector('.nameLogin').classList.remove('d-block');
+    document.querySelector('.exit-acc').classList.remove('d-block');
+});
 
 window.addEventListener('load', () => {
     let checkLogin = localStorage.getItem("userLogin");

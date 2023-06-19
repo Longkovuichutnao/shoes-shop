@@ -23,7 +23,10 @@ document.querySelector('.popupLogin').addEventListener("click", () => {
 document.querySelector('.popupLogin2').addEventListener("click", () => {
     login();
 });
-
+// click lest buy in carousel
+document.getElementById('lest-buy').onclick = () => {
+    login();
+};
 function register() {
     document.querySelector('.regis').style.color = ('#2a73dd');
     document.querySelector('.regis').style.fontWeight = ('bolder');
@@ -97,11 +100,11 @@ document.getElementById('submit').addEventListener("click",
                 console.log(result)
             }).catch(function (error) {
                 alert("Email đã đăng ký rồi!")
-
                 console.log(error)
             })
         }
-    })
+    }
+)
 
 //Login User =======================================================
 document.getElementById('login').addEventListener("click",
@@ -120,7 +123,6 @@ document.getElementById('login').addEventListener("click",
                 method: 'post',
                 url: `https://shop.cyberlearn.vn/api/Users/signin`,
                 data: userLogin
-
             }).then(function (result) {
                 $('#modalLogin').modal('hide')
                 alert("Đăng nhập thành công !")
@@ -128,19 +130,32 @@ document.getElementById('login').addEventListener("click",
                 document.querySelector('.popupRegis').style.display = 'none';
                 document.querySelector('.fa-user-secret').classList.add('d-block');
                 document.querySelector('.nameLogin').classList.add('d-block');
-
+                document.querySelector('.exit-acc').classList.add('d-block');
                 let tenEmail = email.split("@");
                 document.querySelector('.nameLogin').innerHTML = ' Hello! ' + tenEmail[0];
-
+                document.querySelector('.exit-acc').innerHTML = 'Exit';
                 console.log(result.data)
+                localStorage.setItem("userLogin", email);
             }).catch(function (error) {
                 alert("Sai Email hoặc Password !");
-
                 console.log(error);
             });
         };
-    })
+    }
+)
 
-
+window.addEventListener('load', () => {
+    let checkLogin = localStorage.getItem("userLogin");
+    if (checkLogin != null) {
+        document.querySelector('.popupLogin').style.display = 'none';
+        document.querySelector('.popupRegis').style.display = 'none';
+        document.querySelector('.fa-user-secret').classList.add('d-block');
+        document.querySelector('.nameLogin').classList.add('d-block');
+        document.querySelector('.exit-acc').classList.add('d-block');
+        let tenEmail = checkLogin.split("@");
+        document.querySelector('.nameLogin').innerHTML = ' Hello! ' + tenEmail[0];
+        document.querySelector('.exit-acc').innerHTML = 'Exit';
+    }
+});
 
 

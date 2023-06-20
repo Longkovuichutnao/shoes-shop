@@ -32,9 +32,33 @@ html, body {
   border-radius: 0 0 10px;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.125);
+  text-decoration: none;
 }
 .product .btn-buy:hover {
   background-position: right center;
+}
+
+.cart #tableDanhSach .btn-dark {
+  font-size: 12px;
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+.cart #tableDanhSach .btn-dark:hover {
+  opacity: 0.5;
+}
+.cart .myCardFooter .btn-info {
+  background-image: linear-gradient(to right, #eacda3 0%, #d6ae7b 51%, #eacda3 100%);
+  background-size: 200% auto;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  transition: 0.5s;
+  color: black;
+  font-weight: 600;
+}
+.cart .myCardFooter .btn-info:hover {
+  background-position: right center;
+  font-size: large;
+  font-weight: bold;
 }
 
 #modalLogin .modal-title .row {
@@ -239,4 +263,42 @@ footer .footer-bottom a:hover {
 }
 footer .footer-bottom .content-bottom-left {
   margin-right: 20px;
+}
+
+.cart {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#tableDanhSach .check,
+#tableDanhSach .shoeID,
+#tableDanhSach .shoeIMG,
+#tableDanhSach .shoeName,
+#tableDanhSach .shoePrice,
+#tableDanhSach .quantity,
+#tableDanhSach .total {
+  color: #000;
+  font-size: 15px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+#tableDanhSach .quantity span {
+  padding: 0 5px;
+}
+#tableDanhSach .total {
+  font-size: large;
+  font-weight: bolder;
+}
+#tableDanhSach .select {
+  vertical-align: middle;
+}
+#tableDanhSach .select .btn {
+  font-size: 15px;
+}
+
+.myCardFooter .payment {
+  font-weight: 700;
+}
+.myCardFooter .payment .total-price {
+  color: rgba(255, 0, 0, 0.8);
 }/*# sourceMappingURL=main.css.map */

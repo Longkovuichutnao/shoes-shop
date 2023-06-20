@@ -1,0 +1,46 @@
+.cart {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#tableDanhSach {
+
+    .check,
+    .shoeID,
+    .shoeIMG,
+    .shoeName,
+    .shoePrice,
+    .quantity,
+    .total {
+        @include styleText ($color-black, $fs-15, $fw-4);
+        vertical-align: middle;
+    }
+
+    .quantity span {
+        padding: 0 $px-5;
+    }
+
+    .total {
+        // color: rgb(255, 187, 0);
+        font-size: large;
+        font-weight: bolder;
+    }
+
+    .select {
+        vertical-align: middle;
+
+        .btn {
+            font-size: $fs-15;
+        }
+    }
+}
+
+.myCardFooter {
+    .payment {
+        font-weight: $fw-7;
+
+        .total-price {
+            color: rgba(255, 0, 0, 0.8);
+        }
+    }
+}

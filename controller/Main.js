@@ -8,6 +8,7 @@ function layDanhSach() {
 
     }).then(function (result) {
         hienThiDanhSach(result.data.content);
+        // console.log(result.data.content)
     }).catch(function (error) {
         console.log(error);
     })
@@ -27,8 +28,8 @@ function hienThiDanhSach(mang) {
         <div class="card-item col-4">
             <div class="card-item-inner">
             <div class="card-img">
-                <a href="#">
-                    <img class="img-fluid" src= ${shoe.image} alt="">
+                <a href="./view/detail.html">
+                    <img class="img-fluid" src= ${shoe.image}>
                 </a>
             </div>
             <div class="card-body">
@@ -39,10 +40,10 @@ function hienThiDanhSach(mang) {
                 <div class="btn-price">
                     <div class="price">${shoe.price}$</div>
                 </div>
-                <div class="btn-buy">
+                <a href="./view/cart.html?product=${shoe.id}" class="btn-buy">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Buy now
-                </div>
+                </a>
             </div>
             </div>
         </div> `

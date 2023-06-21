@@ -40,7 +40,7 @@ function hienThiDanhSach(mang) {
                 <div class="btn-price">
                     <div class="price">${shoe.price}$</div>
                 </div>
-                <a href="./view/cart.html?product=${shoe.id}" class="btn-buy">
+                <a href="./view/cart.html?product=${shoe.id}" class="btn-buy" onclick="buyNow(${shoe.id})">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Buy now
                 </a>

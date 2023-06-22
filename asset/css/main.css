@@ -239,4 +239,107 @@ footer .footer-bottom a:hover {
 }
 footer .footer-bottom .content-bottom-left {
   margin-right: 20px;
+}
+
+#detailShoe {
+  height: 350px;
+  margin-top: 100px;
+}
+#detailShoe .detail-left .imgDetail {
+  height: 100%;
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-color: #f8f8f8;
+}
+#detailShoe .detail-left .imgDetail .saleOff {
+  width: 45px;
+  background-color: red;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 7.5px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+#detailShoe .detail-right p {
+  font-size: 20px;
+}
+#detailShoe .detail-right .title-size {
+  font-size: 30px;
+  color: #1ed90e;
+}
+#detailShoe .sizeDetail {
+  margin: 20px 0;
+}
+#detailShoe .sizeDetail .btn {
+  font-size: 20px;
+  font-weight: 700;
+}
+#detailShoe .sizeDetail .active {
+  border: 1px solid red;
+  border-radius: 0;
+  font-size: 25px;
+}
+#detailShoe .priceDetail .discountDetail {
+  position: relative;
+  top: -6px;
+  background-color: #f94c43;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 4px 11px;
+}
+#detailShoe .priceDetail .costDetail {
+  padding: 0 10px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #cbc9c9;
+  text-decoration: line-through;
+}
+#detailShoe .priceDetail .saleDetail {
+  font-size: 40px;
+  font-weight: 700;
+  color: red;
+}
+#detailShoe .quantityDetail .btn {
+  font-size: 20px;
+  padding: 2px 15px;
+  border: 1px solid #fc0303;
+}
+#detailShoe .quantityDetail #quantity {
+  display: inline-block;
+  font-size: 25px;
+  position: relative;
+  width: 30px;
+  top: 6px;
+  padding: 0 0px;
+  color: #000;
+  text-align: center;
+}
+#detailShoe .addCartDetail {
+  margin: 20px 0;
+}
+#detailShoe .addCartDetail button {
+  background-image: linear-gradient(to right, #eacda3 0%, #d6ae7b 51%, #eacda3 100%);
+  background-size: 200% auto;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  width: 150px;
+  height: 70px;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 5px 10px 0px rgba(100, 100, 111, 0.2);
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+#detailShoe .addCartDetail button:hover {
+  font-size: 25px;
+  box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+.related-list {
+  margin-top: 200px;
 }/*# sourceMappingURL=main.css.map */

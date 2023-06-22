@@ -23,10 +23,7 @@ document.querySelector('.popupLogin').addEventListener("click", () => {
 document.querySelector('.popupLogin2').addEventListener("click", () => {
     login();
 });
-// click lest buy in carousel
-document.getElementById('lest-buy').onclick = () => {
-    login();
-};
+
 function register() {
     document.querySelector('.regis').style.color = ('#2a73dd');
     document.querySelector('.regis').style.fontWeight = ('bolder');

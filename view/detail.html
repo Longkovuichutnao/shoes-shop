@@ -32,7 +32,7 @@
             <div class="row">
                 <!-- logo -->
                 <div class="col-2 header-logo">
-                    <a href="#">
+                    <a href="../index.html">
                         <img src="../asset/img/adidas-logo.png" class="img-fluid" alt="logo-header">
                     </a>
                 </div>
@@ -64,7 +64,8 @@
                             <a href="#" class="mx-4 popupLogin" data-toggle="modal" data-target="#modalLogin">Login</a>
                         </div>
                         <p class="mb-0 nameLogin d-none"></p>
-                        <a class="mb-0 exit-acc d-none" style="cursor: pointer; text-decoration: underline;"></a>
+                        <a class="mb-0 exit-acc d-none" style="cursor: pointer; text-decoration: underline;"
+                            data-toggle="modal" data-target="#modalExit"></a>
                         <div class="register-header">
                             <a href="#" class="popupRegis" data-toggle="modal" data-target="#modalLogin">Register</a>
                         </div>
@@ -77,37 +78,21 @@
     
 
     <!-- PRODUCT =======================================-->
-    <section class="product">
+    <section class="detailShoes">
         <div class="container">
-            <h3 class="title">PRODUCT CATEGORY</h3>
-            <div class="card-list row">
-                <!-- <div class="card-item col-4">
-                <div class="card-item-inner">
-                <div class="card-img">
-                <a href="#">
-                    <img class="img-fluid" src= ${shoe.image} alt="">
-                </a>
-                </div>
-                <div class="card-body">
-                <h5 class="shoe-name">${shoe.name}</h5>
-                <p class="shoe-desc">${shoe.description}</p>
-                </div>
-                <div class="card-more d-flex">
-                <div class="btn-price">
-                    <div class="price">${shoe.price}$</div>
-                </div>
-                <div class="btn-buy">
-                    <a href="#" class="btn-buynow">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    Buy now</a>
-                </div>
-                </div>
-                </div>
-                </div> -->
+            <div class="row" id="detailShoe">
             </div>
         </div>
     </section>
 
+    <section class="product related-list">
+        <div class="container">
+            <h3 class="title">RELATED PRODUCT</h3>
+            <div class="card-related-list row">
+            </div>
+        </div>
+    </section>
+    
     <!-- The Modal Login ================================= -->
     <section class="modal fade" id="modalLogin">
         <form action="" id="form-reset">
@@ -203,6 +188,26 @@
         </form>
     </section>
 
+     <!-- The Modal Exit ================================= -->
+     <div class="modal fade" id="modalExit" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Hãy cân nhắc kỹ nhé !</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn muốn đăng xuất tài khoản chứ ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="accept-exit">Tôi đồng ý</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- FOOTER ======================================= -->
 
@@ -216,7 +221,7 @@
                         </div>
                         <ul>
                             <li>
-                                <a href="">Home</a>
+                                <a href="../index.html">Home</a>
                             </li>
                             <li>
                                 <a href="">Nike</a>
@@ -297,9 +302,9 @@
     <script src="../model/Shoes.js"></script>
     <script src="../model/User.js"></script>
     <script src="../model/Validation.js"></script>
-
     <script src="../controller/login.js"></script>
-    <script src="../controller/Main.js"></script>
+    <script src="../controller/detailAPI.js"></script>
+    <script src="../controller/detail.js"></script>
 </body>
 
 </html>

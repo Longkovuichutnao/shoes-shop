@@ -101,18 +101,14 @@
                 </tbody>
             </table>
             <div class="card-footer myCardFooter text-right">
-                <h4 class="payment">Total Payment: <span class="total-price">234$</span> </h4>
+                <h4 class="payment">Total Payment: <span id="total-price"></span> </h4>
                 <a href="#">
                     <button class="btn btn-info">Submit Order</button>
                 </a>
 
             </div>
         </div>
-
-
     </section>
-
-
 
     <!-- FOOTER ======================================= -->
     <footer class="container">
@@ -128,10 +124,10 @@
                                 <a href="">Home</a>
                             </li>
                             <li>
-                                <a href="">Nike</a>
+                                <a href="https://www.nike.com/vn/">Nike</a>
                             </li>
                             <li>
-                                <a href="">Adidas</a>
+                                <a href="https://www.adidas.com.vn/vi">Adidas</a>
                             </li>
                             <li>
                                 <a href="">Contact</a>
@@ -146,7 +142,7 @@
                         </div>
                         <ul>
                             <li>
-                                <a href="#">About</a>
+                                <a href="">About</a>
                             </li>
                             <li>
                                 <a href="#">Contact</a>
@@ -188,6 +184,98 @@
         </div>
     </footer>
 
+    <!-- The Modal Login ================================= -->
+    <section class="modal fade" id="modalLogin">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-title container mt-3">
+                    <div class="row">
+                        <h4 class="login col-6 text-center">Log In</h4>
+                        <h4 class="regis col-6 text-center">Register</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form id="formUser" role="form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                </div>
+                                <input type="email" name="email" id="email" class="form-control input-sm"
+                                    placeholder="Email" />
+                            </div>
+                            <span class="sp-thongbao" id="tbEmail"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                </div>
+                                <input type="password" name="password" id="password" class="form-control input-sm"
+                                    placeholder="Password" />
+                            </div>
+                            <span class="sp-thongbao" id="tbPassword"></span>
+                        </div>
+                        <div class="form-group d-register d-none">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                </div>
+                                <input type="password" name="password" id="password2" class="form-control input-sm"
+                                    placeholder="Password confirm" />
+                            </div>
+                            <span class="sp-thongbao" id="tbPassword2"></span>
+                        </div>
+                        <div class="form-group d-register d-none">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-address-book"></i></span>
+                                </div>
+                                <input type="name" name="tk" id="name" class="form-control input-sm"
+                                    placeholder="Name" />
+                            </div>
+                            <span class="sp-thongbao" id="tbName"></span>
+                        </div>
+                        <div class="form-group d-register d-none">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                                </div>
+                                <input type="number" name="phone" id="phone" class="form-control input-sm"
+                                    placeholder="Phone" />
+                            </div>
+                            <span class="sp-thongbao" id="tbPhone"></span>
+                        </div>
+                        <div class="form-group d-register d-none">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <!-- label padding + margin -->
+                                <div class="input-group-prepend gender">
+                                    <!-- <p class="mb-0">Gender:</p> -->
+                                    <input class="mr-1" checked type="radio" id="male" name="gender" />
+                                    <label class="mb-0 mr-3" for="male">Male</label>
+                                    <input class="mr-1" type="radio" id="female" name="gender" />
+                                    <label class="mb-0" for="female">Female</label>
+                                </div>
+                            </div>
+                            <span class="sp-thongbao" id="tbGender"></span>
+                        </div>
+                    </form>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer justify-content-between" id="modal-footer">
+                    <button id="exit" type="button" class="btn btn-danger" data-dismiss="modal">
+                        Exit</button>
+                    <button id="submit" type="button" class="btn btn-info d-none">
+                        Submit</button>
+                    <button id="login" type="button" class="btn btn-info">
+                        Log In</button>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Script ========================================== -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -204,11 +292,11 @@
 
     <script src="../model/Shoes.js"></script>
     <script src="../model/DanhSachShoes.js"></script>
-
     <script src="../model/User.js"></script>
+    <script src="../model/Validation.js"></script>
 
+    <script src="../controller/login.js"></script>
     <script src="../controller/cart.js"></script>
-
 </body>
 
 </html>

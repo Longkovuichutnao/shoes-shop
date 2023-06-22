@@ -299,6 +299,6 @@ footer .footer-bottom .content-bottom-left {
 .myCardFooter .payment {
   font-weight: 700;
 }
-.myCardFooter .payment .total-price {
+.myCardFooter .payment #total-price {
   color: rgba(255, 0, 0, 0.8);
 }/*# sourceMappingURL=main.css.map */

@@ -1,32 +1,27 @@
 //Lưu local =======================================================
-// var shoeInfo = [];
 const dsShoes = new DanhSachShoes();
 
 function setLocalStorage(mang) {
     localStorage.setItem("DSShoe", JSON.stringify(mang));
 }
+
 function getLocalStorage() {
     let dataLocal = JSON.parse(localStorage.getItem("DSShoe"));
     if (dataLocal !== null) {
         hienThiSP(dataLocal)
         dsShoes.arrShoe = dataLocal;
     }
-
 }
 getLocalStorage();
 
 //Click buy now =======================================================
-// window.onload = function () {
-//     const urlParams = new URLSearchParams(window.location.search);
-//     const myParam = urlParams.get('product');
-
-function buyNow(shoeID) {
-    console.log("first")
+window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('product');
     axios({
         method: 'get',
-        url: 'https://shop.cyberlearn.vn/api/Product/getbyid?id=' + shoeID,
+        url: 'https://shop.cyberlearn.vn/api/Product/getbyid?id=' + myParam,
     }).then(function (result) {
-        console.log(result)
         let shoe = {
             id: result.data.content.id,
             image: result.data.content.image,
@@ -38,8 +33,8 @@ function buyNow(shoeID) {
         dsShoes.arrShoe.map(function (ktraID, index) {
             if (ktraID.id === shoe.id) {
                 dsShoes.arrShoe[index].quantity += 1
+                setLocalStorage(dsShoes.arrShoe);
             }
-            setLocalStorage(dsShoes.arrShoe);
         })
 
         if (dsShoes.arrShoe.every(function (ktraID, index) {
@@ -49,24 +44,18 @@ function buyNow(shoeID) {
             setLocalStorage(dsShoes.arrShoe);
             hienThiSP(dsShoes.arrShoe)
         }
-
     }).catch(function (error) {
         console.log(error);
     })
-
 }
-// }
-
-
-
 
 //Hiển thị SP =======================================================
 function hienThiSP(mangLocal) {
     let content = "";
-
+    let totalList = 0;
     mangLocal.map(function (shoe, index) {
-        var quantity = 1;
-        var infoSP = `<tr class="table-list">
+        let total = shoe.price * shoe.quantity;
+        let infoSP = `<tr class="table-list">
         <td class="check"><input type="checkbox"></td>
         <td class="shoeID">${shoe.id}</td>
         <td class="shoeIMG"><img class="img-fluid" src= ${shoe.image}></td>
@@ -75,42 +64,45 @@ function hienThiSP(mangLocal) {
         <td class="quantity">
             <button class="btn btn-dark" onclick="clickDown(${shoe.id})" >
                 <i class="fa-solid fa-minus"></i></button>
-                <span id="quantityClick">${quantity}</span>
+                <span id="quantityClick">${shoe.quantity}</span>
             <button class="btn btn-dark" onclick="clickUp(${shoe.id})" >
                 <i class="fa-solid fa-plus"></i></button>
         </td>
-        <td class="total">${shoe.price * quantity}$</td>
+        <td class="total"> ${total.toLocaleString('en-US')}$</td>
         <td class="select">
        <!-- <button class="btn btn-info" onclick="editSP(${shoe.id})">Edit</button> -->
             <button class="btn btn-danger" onclick="xoaSP(${shoe.id})">Delete</button>
         </td>
         </tr>`
         content += infoSP
+        totalList += total
     })
     document.getElementById("tableDanhSach").innerHTML = content;
+    document.getElementById("total-price").innerHTML = totalList.toLocaleString('en-US') + '$';
 }
+
 //Click Delete  =======================================================
 function xoaSP(shoeID) {
     dsShoes.xoa(shoeID);
-
-    console.log(dsShoes.arrShoe)
     hienThiSP(dsShoes.arrShoe);
     setLocalStorage(dsShoes.arrShoe);
 }
-//Click + -  =======================================================
-function clickUp(id) {
-    let indexFind
 
-    quantity += 1
-    localStorage.setItem("quantityShoe", JSON.stringify(quantity));
-    document.getElementById("quantityClick").innerHTML = quantity;
+//Click + -  =======================================================
+function clickUp(shoeID) {
+    let i = dsShoes.timIndex(shoeID)
+    dsShoes.arrShoe[i].quantity += 1
+    hienThiSP(dsShoes.arrShoe);
+    setLocalStorage(dsShoes.arrShoe);
 }
 
-function clickDown(id) {
-    if (quantity > 0) {
-        quantity -= 1
-        document.getElementById("quantityClick").innerHTML = quantity;
+function clickDown(shoeID) {
+    let i = dsShoes.timIndex(shoeID)
+    if (dsShoes.arrShoe[i].quantity > 0) {
+        dsShoes.arrShoe[i].quantity -= 1
+        hienThiSP(dsShoes.arrShoe);
+        setLocalStorage(dsShoes.arrShoe);
     } else {
-        alert("Tăng số lượng sản phẩm để mua nào!")
+        alert("Tăng số lượng sản phẩm để mua bạn ơi!")
     }
 }

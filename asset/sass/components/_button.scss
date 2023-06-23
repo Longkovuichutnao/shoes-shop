@@ -42,7 +42,7 @@
     }
 
     .myCardFooter {
-        .btn-info {
+        .btn-submit {
             background-image: linear-gradient(to right, #eacda3 0%, #d6ae7b 51%, #eacda3 100%);
             background-size: 200% auto;
             cursor: pointer;
@@ -52,8 +52,8 @@
             font-weight: $fw-6;
             &:hover {
                 background-position: right center;
-                font-size: large;
-                font-weight: bold;
+                font-size: larger;
+                font-weight: bolder;
             }
 
         }

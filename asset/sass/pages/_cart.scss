@@ -9,6 +9,7 @@
     .shoeID,
     .shoeIMG,
     .shoeName,
+    .shoeSize,
     .shoePrice,
     .quantity,
     .total {
@@ -36,11 +37,18 @@
 }
 
 .myCardFooter {
+    padding-bottom: 50px;
     .payment {
         font-weight: $fw-7;
+        position: relative;
 
         #total-price {
             color: rgba(255, 0, 0, 0.8);
         }
+    }
+    a{
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
     }
 }

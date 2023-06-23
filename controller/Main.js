@@ -1,19 +1,17 @@
 
-
 // Lấy list danh sách trang index =================
 function layDanhSach() {
     axios({
         method: 'get',
         url: 'https://shop.cyberlearn.vn/api/Product',
-
     }).then(function (result) {
         hienThiDanhSach(result.data.content);
     }).catch(function (error) {
         console.log(error);
     })
-
 };
 layDanhSach();
+
 function hienThiDanhSach(mang) {
     let list = "";
     mang.map(function (shoes, index) {
@@ -39,10 +37,10 @@ function hienThiDanhSach(mang) {
                 <div class="btn-price">
                     <div class="price">${shoes.price}$</div>
                 </div>
-                <div class="btn-buy">
+                <a href="./view/cart.html?product=${shoes.id}" class="btn-buy">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Buy now
-                </div>
+                </a>
             </div>
             </div>
         </div> `

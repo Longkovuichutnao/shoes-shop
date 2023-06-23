@@ -32,9 +32,33 @@ html, body {
   border-radius: 0 0 10px;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.125);
+  text-decoration: none;
 }
 .product .btn-buy:hover {
   background-position: right center;
+}
+
+.cart #tableDanhSach .btn-dark {
+  font-size: 12px;
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+.cart #tableDanhSach .btn-dark:hover {
+  opacity: 0.5;
+}
+.cart .myCardFooter .btn-submit {
+  background-image: linear-gradient(to right, #eacda3 0%, #d6ae7b 51%, #eacda3 100%);
+  background-size: 200% auto;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  transition: 0.5s;
+  color: black;
+  font-weight: 600;
+}
+.cart .myCardFooter .btn-submit:hover {
+  background-position: right center;
+  font-size: larger;
+  font-weight: bolder;
 }
 
 #modalLogin .modal-title .row {

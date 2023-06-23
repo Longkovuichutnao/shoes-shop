@@ -34,7 +34,7 @@ const showDetail = (id) => {
                 <button class="btn plusDetail" id="plusDetail">+</button>
             </div>
             <div class="addCartDetail">
-                <button onclick="checkLoginDetail()">Add to cart</button>
+                <button onclick="checkLoginDetail(${shoeDetail.id})">Add to cart</button>
             </div>
       </div>`
         quantityDetail();
@@ -69,7 +69,7 @@ const showRelateShoes = (array) => {
                 <div class="btn-price">
                     <div class="price">${shoe.price}$</div>
                 </div>
-                <div class="btn-buy">
+                <div onclick="checkLoginDetail(${shoe.id})" class="btn-buy">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Buy now
                 </div>

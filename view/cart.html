@@ -58,12 +58,14 @@
                         <!-- icon header -->
                         <input class="form-control ip-search" placeholder="Search" />
                         <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
-                        <i class="fa-solid fa-cart-shopping pr-3" style="cursor: pointer;"></i>
-                        <i class="fa-solid fa-solid fa-user-secret d-none"></i>
+                        <i class="fa-solid fa-cart-shopping pr-3" style="cursor: pointer;"><span id="countCart"></span></i>
+                        <i class="fa-solid fa-solid fa-user-secret d-none" id="icon-login"></i>
                         <div class="logIn-header">
                             <a href="#" class="mx-4 popupLogin" data-toggle="modal" data-target="#modalLogin">Login</a>
-                            <p class="mb-0 nameLogin d-none"></p>
                         </div>
+                        <p class="mb-0 nameLogin d-none"></p>
+                        <a class="mb-0 exit-acc d-none" style="cursor: pointer; text-decoration: underline;"
+                            data-toggle="modal" data-target="#modalExit"></a>
                         <div class="register-header">
                             <a href="#" class="popupRegis" data-toggle="modal" data-target="#modalLogin">Register</a>
                         </div>
@@ -180,7 +182,7 @@
                 <span>© 2022 Cybersoft All Rights Reserved</span>
             </div>
             <div class="content-bottom-right">
-                <span>Design Theme by <a href="">Tran Dinh Duy Long</a> and <a href="">Nguyen Dac Khanh</a></span>
+                <span>Design Theme by <a href="#">Tran Dinh Duy Long</a> and <a href="#">Nguyen Dac Khanh</a></span>
             </div>
         </div>
     </footer>
@@ -275,6 +277,27 @@
             </div>
         </div>
     </section>
+
+    <!-- The Modal Exit ================================= -->
+    <div class="modal fade" id="modalExit" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Hãy cân nhắc kỹ nhé !</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn muốn đăng xuất tài khoản chứ ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="accept-exit">Tôi đồng ý</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Script ========================================== -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

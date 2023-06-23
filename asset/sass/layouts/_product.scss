@@ -1,6 +1,4 @@
 .product {
-
-    // background-color: $color-gray;
     .title {
         @include styleText($color-dark-3, $fs-25, $fw-4);
         padding: $px-20 0;

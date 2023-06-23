@@ -32,7 +32,7 @@
             <div class="row">
                 <!-- logo -->
                 <div class="col-2 header-logo">
-                    <a href="#">
+                    <a href="./index.html">
                         <img src="./asset/img/adidas-logo.png" class="img-fluid" alt="logo-header">
                     </a>
                 </div>
@@ -58,12 +58,14 @@
                         <!-- icon header -->
                         <input class="form-control ip-search" placeholder="Search" />
                         <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
-                        <i class="fa-solid fa-cart-shopping pr-3" style="cursor: pointer;"></i>
-                        <i class="fa-solid fa-solid fa-user-secret d-none"></i>
+                        <i class="fa-solid fa-cart-shopping pr-3" style="cursor: pointer;"><span id="countCart"></span> </i>
+                        <i class="fa-solid fa-solid fa-user-secret d-none" id="icon-login"></i>
                         <div class="logIn-header">
                             <a href="#" class="mx-4 popupLogin" data-toggle="modal" data-target="#modalLogin">Login</a>
-                            <p class="mb-0 nameLogin d-none"></p>
                         </div>
+                        <p class="mb-0 nameLogin d-none"></p>
+                        <a class="mb-0 exit-acc d-none" style="cursor: pointer; text-decoration: underline;"
+                            data-toggle="modal" data-target="#modalExit"></a>
                         <div class="register-header">
                             <a href="#" class="popupRegis" data-toggle="modal" data-target="#modalLogin">Register</a>
                         </div>
@@ -83,7 +85,10 @@
                 <div class="title-content-carousel">
                     <p>
                         Hurry up and buy to enjoy the great <br> deals of the store, it brings more awsome.
-                        <br> <br> <a href="" style="color: black; text-decoration: none;">LEST BUY</a>
+                        <br> <br>
+                        <a href="#" style="color: black; text-decoration: none;" id="lest-buy">
+                            LEST BUY
+                        </a>
                     </p>
                 </div>
                 <img src="./asset/img/carousel.jpg" class="w-100 d-block carousel-img img-first img-fluid" alt="">
@@ -203,6 +208,27 @@
         </div>
     </section>
 
+    <!-- The Modal Exit ================================= -->
+    <div class="modal fade" id="modalExit" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Hãy cân nhắc kỹ nhé !</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn muốn đăng xuất tài khoản chứ ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="accept-exit">Tôi đồng ý</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
     <!-- FOOTER ======================================= -->
 
     <footer class="container">
@@ -215,13 +241,13 @@
                         </div>
                         <ul>
                             <li>
-                                <a href="">Home</a>
+                                <a href="./index.html">Home</a>
                             </li>
                             <li>
-                                <a href="">Nike</a>
+                                <a href="https://www.nike.com/vn/">Nike</a>
                             </li>
                             <li>
-                                <a href="">Adidas</a>
+                                <a href="https://www.adidas.com.vn/vi">Adidas</a>
                             </li>
                             <li>
                                 <a href="">Contact</a>
@@ -294,6 +320,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
     <script src="./model/Shoes.js"></script>
+    <script src="./model/DanhSachShoes.js"></script>
     <script src="./model/User.js"></script>
     <script src="./model/Validation.js"></script>
 

@@ -25,7 +25,7 @@ function hienThiDanhSach(mang) {
         <div class="card-item col-4">
             <div class="card-item-inner">
             <div class="card-img">
-                <a href="#">
+                <a href="./view/detail.html?productId=${getId}" onclick="showDetail('${getId}')">
                     <img class="img-fluid" src= ${shoes.image} alt="">
                 </a>
             </div>

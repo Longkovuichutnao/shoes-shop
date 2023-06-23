@@ -97,11 +97,11 @@ document.getElementById('submit').addEventListener("click",
                 console.log(result)
             }).catch(function (error) {
                 alert("Email đã đăng ký rồi!")
+
                 console.log(error)
             })
         }
-    }
-);
+    })
 
 //Login User =======================================================
 document.getElementById('login').addEventListener("click",
@@ -120,6 +120,7 @@ document.getElementById('login').addEventListener("click",
                 method: 'post',
                 url: `https://shop.cyberlearn.vn/api/Users/signin`,
                 data: userLogin
+
             }).then(function (result) {
                 $('#modalLogin').modal('hide')
                 alert("Đăng nhập thành công !")
@@ -128,18 +129,67 @@ document.getElementById('login').addEventListener("click",
                 document.querySelector('.fa-user-secret').classList.add('d-block');
                 document.querySelector('.nameLogin').classList.add('d-block');
                 document.querySelector('.exit-acc').classList.add('d-block');
+                document.querySelector('.exit-acc').innerHTML = 'Exit';
+
                 let tenEmail = email.split("@");
                 document.querySelector('.nameLogin').innerHTML = ' Hello! ' + tenEmail[0];
-                document.querySelector('.exit-acc').innerHTML = 'Exit';
+
+                localStorage.setItem("userLogin", JSON.stringify(tenEmail[0]));
+
                 console.log(result.data)
-                localStorage.setItem("userLogin", email);
             }).catch(function (error) {
                 alert("Sai Email hoặc Password !");
+
                 console.log(error);
             });
         };
+    })
+//Check login
+const checkLoginDetail = (id) => {
+    let checkLogin = JSON.parse(localStorage.getItem("userLogin"));
+    if (checkLogin == null) {
+        alert("Đăng nhập để mua sản phẩm!");
+    } else {
+        window.location = "../view/cart.html?product=" + id
     }
-);
+}
+const checkLoginIndex = (id) => {
+    let checkLogin = JSON.parse(localStorage.getItem("userLogin"));
+    if (checkLogin == null) {
+        alert("Đăng nhập để mua sản phẩm!");
+    } else {
+        window.location = "./view/cart.html?product=" + id
+    }
+}
+//Check cart
+const checkCart = () => {
+    let checkCart = JSON.parse(localStorage.getItem("DSShoe"));
+    document.getElementById('countCart').innerHTML = checkCart.length
+}
+checkCart();
+document.querySelector('.fa-cart-shopping').addEventListener('click',function(){
+    if (window.location.href.includes('view')) {
+        window.location = "../view/cart.html"
+    } else {
+        window.location = "./view/cart.html"
+    }
+}) 
+
+/**
+ * xử lý trường hợp load mà mất acc
+ */
+window.addEventListener('load', () => {
+    let checkLogin = JSON.parse(localStorage.getItem("userLogin"));
+    if (checkLogin != null) {
+        document.querySelector('.popupLogin').style.display = 'none';
+        document.querySelector('.popupRegis').style.display = 'none';
+        document.querySelector('.fa-user-secret').classList.add('d-block');
+        document.querySelector('.nameLogin').classList.add('d-block');
+        document.querySelector('.exit-acc').classList.add('d-block');
+        document.querySelector('.nameLogin').innerHTML = ' Hello! ' + checkLogin;
+        document.querySelector('.exit-acc').innerHTML = 'Exit';
+    }
+});
 
 /**
  * hàm này dùng để click exit thì nó xóa local cái email
@@ -148,28 +198,14 @@ document.getElementById('login').addEventListener("click",
 document.getElementById('accept-exit').addEventListener('click', () => {
     $('#modalExit').modal('hide');
     localStorage.removeItem("userLogin");
-    document.querySelector('.popupLogin').style.display = 'block';
-    document.querySelector('.popupRegis').style.display = 'block';
-    document.querySelector('.fa-user-secret').classList.remove('d-block');
-    document.querySelector('.nameLogin').classList.remove('d-block');
-    document.querySelector('.exit-acc').classList.remove('d-block');
-});
-
-/**
- * xử lý trường hợp load mà mất acc
- */
-window.addEventListener('load', () => {
-    let checkLogin = localStorage.getItem("userLogin");
-    if (checkLogin != null) {
-        document.querySelector('.popupLogin').style.display = 'none';
-        document.querySelector('.popupRegis').style.display = 'none';
-        document.querySelector('.fa-user-secret').classList.add('d-block');
-        document.querySelector('.nameLogin').classList.add('d-block');
-        document.querySelector('.exit-acc').classList.add('d-block');
-        let tenEmail = checkLogin.split("@");
-        document.querySelector('.nameLogin').innerHTML = ' Hello! ' + tenEmail[0];
-        document.querySelector('.exit-acc').innerHTML = 'Exit';
+    if (window.location.href.includes('view')) {
+        window.location = "../index.html"
+    } else {
+        window.location = "./index.html"
     }
 });
+
+
+
 
 

@@ -34,10 +34,3 @@ const quantityDetail = () => {
     })
 }
 
-const checkLoginDetail = () => {
-    const checkLocal = localStorage.getItem("userLogic");
-    if (checkLocal == null) {
-        alert("you must login first !");
-    }
-}
-window.checkLoginDetail = checkLoginDetail;

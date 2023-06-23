@@ -58,7 +58,8 @@
                         <!-- icon header -->
                         <input class="form-control ip-search" placeholder="Search" />
                         <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
-                        <i class="fa-solid fa-cart-shopping pr-3" style="cursor: pointer;"></i>
+                        <i class="fa-solid fa-cart-shopping pr-3" style="cursor: pointer;"><span
+                                id="countCart"></span></i>
                         <i class="fa-solid fa-solid fa-user-secret d-none"></i>
                         <div class="logIn-header">
                             <a href="#" class="mx-4 popupLogin" data-toggle="modal" data-target="#modalLogin">Login</a>
@@ -75,7 +76,7 @@
         </div>
     </header>
 
-    
+
 
     <!-- PRODUCT =======================================-->
     <section class="detailShoes">
@@ -92,7 +93,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- The Modal Login ================================= -->
     <section class="modal fade" id="modalLogin">
         <form action="" id="form-reset">
@@ -105,74 +106,72 @@
                         </div>
                     </div>
                     <div class="modal-body">
-                        <form id="formUser" role="form">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                                    </div>
-                                    <input type="email" name="email" id="email" class="form-control input-sm"
-                                        placeholder="Email" />
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
                                 </div>
-                                <span class="sp-thongbao" id="tbEmail"></span>
+                                <input type="email" name="email" id="email" class="form-control input-sm"
+                                    placeholder="Email" />
                             </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa fa-key"></i></span>
-                                    </div>
-                                    <input type="password" name="password" id="password" class="form-control input-sm"
-                                        placeholder="Password" />
+                            <span class="sp-thongbao" id="tbEmail"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
                                 </div>
-                                <span class="sp-thongbao" id="tbPassword"></span>
+                                <input type="password" name="password" id="password" class="form-control input-sm"
+                                    placeholder="Password" />
                             </div>
-                            <div class="form-group d-register d-none">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa fa-key"></i></span>
-                                    </div>
-                                    <input type="password" name="password" id="password2" class="form-control input-sm"
-                                        placeholder="Password confirm" />
+                            <span class="sp-thongbao" id="tbPassword"></span>
+                        </div>
+                        <div class="form-group d-register d-none">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
                                 </div>
-                                <span class="sp-thongbao" id="tbPassword2"></span>
+                                <input type="password" name="password" id="password2" class="form-control input-sm"
+                                    placeholder="Password confirm" />
                             </div>
-                            <div class="form-group d-register d-none">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa fa-address-book"></i></span>
-                                    </div>
-                                    <input type="name" name="tk" id="name" class="form-control input-sm"
-                                        placeholder="Name" />
+                            <span class="sp-thongbao" id="tbPassword2"></span>
+                        </div>
+                        <div class="form-group d-register d-none">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-address-book"></i></span>
                                 </div>
-                                <span class="sp-thongbao" id="tbName"></span>
+                                <input type="name" name="tk" id="name" class="form-control input-sm"
+                                    placeholder="Name" />
                             </div>
-                            <div class="form-group d-register d-none">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
-                                    </div>
-                                    <input type="number" name="phone" id="phone" class="form-control input-sm"
-                                        placeholder="Phone" />
+                            <span class="sp-thongbao" id="tbName"></span>
+                        </div>
+                        <div class="form-group d-register d-none">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
                                 </div>
-                                <span class="sp-thongbao" id="tbPhone"></span>
+                                <input type="number" name="phone" id="phone" class="form-control input-sm"
+                                    placeholder="Phone" />
                             </div>
-                            <div class="form-group d-register d-none">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
-                                    </div>
-                                    <!-- label padding + margin -->
-                                    <div class="input-group-prepend gender">
-                                        <!-- <p class="mb-0">Gender:</p> -->
-                                        <input class="mr-1" checked type="radio" id="male" name="gender" />
-                                        <label class="mb-0 mr-3" for="male">Male</label>
-                                        <input class="mr-1" type="radio" id="female" name="gender" />
-                                        <label class="mb-0" for="female">Female</label>
-                                    </div>
+                            <span class="sp-thongbao" id="tbPhone"></span>
+                        </div>
+                        <div class="form-group d-register d-none">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>
-                                <span class="sp-thongbao" id="tbGender"></span>
+                                <!-- label padding + margin -->
+                                <div class="input-group-prepend gender">
+                                    <!-- <p class="mb-0">Gender:</p> -->
+                                    <input class="mr-1" checked type="radio" id="male" name="gender" />
+                                    <label class="mb-0 mr-3" for="male">Male</label>
+                                    <input class="mr-1" type="radio" id="female" name="gender" />
+                                    <label class="mb-0" for="female">Female</label>
+                                </div>
                             </div>
-                        </form>
+                            <span class="sp-thongbao" id="tbGender"></span>
+                        </div>
                     </div>
                     <!-- Modal footer -->
                     <div class="modal-footer justify-content-between" id="modal-footer">
@@ -188,8 +187,8 @@
         </form>
     </section>
 
-     <!-- The Modal Exit ================================= -->
-     <div class="modal fade" id="modalExit" role="dialog">
+    <!-- The Modal Exit ================================= -->
+    <div class="modal fade" id="modalExit" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
@@ -224,10 +223,10 @@
                                 <a href="../index.html">Home</a>
                             </li>
                             <li>
-                                <a href="">Nike</a>
+                                <a href="https://www.nike.com/vn/">Nike</a>
                             </li>
                             <li>
-                                <a href="">Adidas</a>
+                                <a href="https://www.adidas.com.vn/vi">Adidas</a>
                             </li>
                             <li>
                                 <a href="">Contact</a>

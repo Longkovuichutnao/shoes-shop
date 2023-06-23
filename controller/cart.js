@@ -11,6 +11,7 @@ function getLocalStorage() {
         hienThiSP(dataLocal)
         dsShoes.arrShoe = dataLocal;
     }
+    console.log(dsShoes.arrShoe)
 }
 getLocalStorage();
 
@@ -78,6 +79,8 @@ function hienThiSP(mangLocal) {
     })
     document.getElementById("tableDanhSach").innerHTML = content;
     document.getElementById("total-price").innerHTML = 0 + '$';
+    checkCart();
+
 }
 
 //Click CheckBox  =======================================================
@@ -112,6 +115,7 @@ function xoaSP(shoeID) {
     dsShoes.xoa(shoeID);
     hienThiSP(dsShoes.arrShoe);
     setLocalStorage(dsShoes.arrShoe);
+    checkCart();
 }
 
 //Click + -  =======================================================
@@ -150,7 +154,7 @@ function order() {
         return timcheck.checked == true
     })) {
         alert("Thanh toán thành công!")
-        localStorage.clear();
+        localStorage.removeItem(DSShoe);
         window.location = "../index.html"
     } else {
         alert("Vui lòng lựa chọn sản phẩm để thanh toán!")

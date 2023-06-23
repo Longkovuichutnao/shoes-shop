@@ -9,33 +9,33 @@ function layDanhSach() {
     }).catch(function (error) {
         console.log(error);
     })
-}
+};
 layDanhSach();
 
 function hienThiDanhSach(mang) {
     let list = "";
-    mang.map(function (shoe, index) {
-        let arrDesc = shoe.description.split(" ");
+    mang.map(function (shoes, index) {
+        let arrDesc = shoes.description.split(" ");
         let shortDesc = ""
         for (let i = 0; i < 12; i++) {
             shortDesc += arrDesc[i] + " "
         }
-
+        let getId = shoes.id;
         let shoeInfo = `
         <div class="card-item col-4">
             <div class="card-item-inner">
             <div class="card-img">
-                <a href="./view/detail.html">
-                    <img class="img-fluid" src= ${shoe.image}>
+                <a href="./view/detail.html?productId=${getId}" onclick="showDetail('${getId}')">
+                    <img class="img-fluid" src= ${shoes.image}>
                 </a>
             </div>
             <div class="card-body">
-                <h5 class="shoe-name">${shoe.name}</h5>
+                <h5 class="shoe-name">${shoes.name}</h5>
                 <p class="shoe-desc">${shortDesc}.......</p>
             </div>
             <div class="card-more d-flex">
                 <div class="btn-price">
-                    <div class="price">${shoe.price}$</div>
+                    <div class="price">${shoes.price}$</div>
                 </div>
                 <a href="./view/cart.html?product=${shoe.id}" class="btn-buy">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -47,4 +47,4 @@ function hienThiDanhSach(mang) {
         list += shoeInfo;
     })
     document.querySelector('.card-list').innerHTML = list;
-}
+};

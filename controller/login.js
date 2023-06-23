@@ -97,11 +97,11 @@ document.getElementById('submit').addEventListener("click",
                 console.log(result)
             }).catch(function (error) {
                 alert("Email đã đăng ký rồi!")
-
                 console.log(error)
             })
         }
-    })
+    }
+);
 
 //Login User =======================================================
 document.getElementById('login').addEventListener("click",
@@ -120,7 +120,6 @@ document.getElementById('login').addEventListener("click",
                 method: 'post',
                 url: `https://shop.cyberlearn.vn/api/Users/signin`,
                 data: userLogin
-
             }).then(function (result) {
                 $('#modalLogin').modal('hide')
                 alert("Đăng nhập thành công !")
@@ -128,19 +127,49 @@ document.getElementById('login').addEventListener("click",
                 document.querySelector('.popupRegis').style.display = 'none';
                 document.querySelector('.fa-user-secret').classList.add('d-block');
                 document.querySelector('.nameLogin').classList.add('d-block');
-
+                document.querySelector('.exit-acc').classList.add('d-block');
                 let tenEmail = email.split("@");
                 document.querySelector('.nameLogin').innerHTML = ' Hello! ' + tenEmail[0];
-
+                document.querySelector('.exit-acc').innerHTML = 'Exit';
                 console.log(result.data)
+                localStorage.setItem("userLogin", email);
             }).catch(function (error) {
                 alert("Sai Email hoặc Password !");
-
                 console.log(error);
             });
         };
-    })
+    }
+);
 
+/**
+ * hàm này dùng để click exit thì nó xóa local cái email
+ * remove luôn mấy cái d-block để nó còn là d-none thôi
+ */
+document.getElementById('accept-exit').addEventListener('click', () => {
+    $('#modalExit').modal('hide');
+    localStorage.removeItem("userLogin");
+    document.querySelector('.popupLogin').style.display = 'block';
+    document.querySelector('.popupRegis').style.display = 'block';
+    document.querySelector('.fa-user-secret').classList.remove('d-block');
+    document.querySelector('.nameLogin').classList.remove('d-block');
+    document.querySelector('.exit-acc').classList.remove('d-block');
+});
 
+/**
+ * xử lý trường hợp load mà mất acc
+ */
+window.addEventListener('load', () => {
+    let checkLogin = localStorage.getItem("userLogin");
+    if (checkLogin != null) {
+        document.querySelector('.popupLogin').style.display = 'none';
+        document.querySelector('.popupRegis').style.display = 'none';
+        document.querySelector('.fa-user-secret').classList.add('d-block');
+        document.querySelector('.nameLogin').classList.add('d-block');
+        document.querySelector('.exit-acc').classList.add('d-block');
+        let tenEmail = checkLogin.split("@");
+        document.querySelector('.nameLogin').innerHTML = ' Hello! ' + tenEmail[0];
+        document.querySelector('.exit-acc').innerHTML = 'Exit';
+    }
+});
 
 

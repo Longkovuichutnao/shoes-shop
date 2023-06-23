@@ -5,5 +5,4 @@ function User(email, password, name, phone, gender) {
     this.name = name;
     this.phone = phone;
     this.gender = gender;
-
 }

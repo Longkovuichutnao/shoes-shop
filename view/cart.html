@@ -56,9 +56,9 @@
                 <div class="col-6 d-flex justify-content-center header-elements">
                     <div class="row icon-elements">
                         <!-- icon header -->
-                        <input class="form-control ip-search" placeholder="Search" />
-                        <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
-                        <i class="fa-solid fa-cart-shopping pr-3" style="cursor: pointer;"><span id="countCart"></span></i>
+                        <input class="form-control d-none ip-search" placeholder="Search" />
+                        <!-- <i class="fa-solid fa-magnifying-glass" id="icon-search"></i> -->
+                        <i class="fa-solid fa-cart-shopping pr-3" style="cursor: pointer;"><span class="d-none" id="countCart"></span></i>
                         <i class="fa-solid fa-solid fa-user-secret d-none" id="icon-login"></i>
                         <div class="logIn-header">
                             <a href="#" class="mx-4 popupLogin" data-toggle="modal" data-target="#modalLogin">Login</a>
@@ -166,11 +166,10 @@
                         </div>
                         <ul>
                             <li>
-                                <a href="#" class="popupLogin2" data-toggle="modal" data-target="#modalLogin">Login</a>
+                                <a href="#" class="popupLogin2" >Infomation</a>
                             </li>
                             <li>
-                                <a href="#" class="popupRegis2" data-toggle="modal"
-                                    data-target="#modalLogin">Register</a>
+                                <a href="#" class="popupRegis2">Setting</a>
                             </li>
                         </ul>
                     </div>
@@ -297,6 +296,13 @@
             </div>
         </div>
     </div>
+    <!-- BACK TOP ========================================== -->
+    <a href="#" class="backtoTop cd-top text-replace js-cd-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+    <script src="../js/mainBackToTop.js"></script>
+    <script src="../js/utilBacktoTop.js"></script>
+    <!-- BACK TOP ========================================== -->
 
     <!-- Script ========================================== -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

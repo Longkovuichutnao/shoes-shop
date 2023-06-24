@@ -1,6 +1,6 @@
 .product {
     .title {
-        @include styleText($color-dark-3, $fs-25, $fw-4);
+        @include styleText(#9d681e, $fs-25, $fw-7);
         padding: $px-20 0;
     }
 

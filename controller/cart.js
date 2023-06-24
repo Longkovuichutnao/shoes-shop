@@ -11,7 +11,6 @@ function getLocalStorage() {
         hienThiSP(dataLocal)
         dsShoes.arrShoe = dataLocal;
     }
-    console.log(dsShoes.arrShoe)
 }
 getLocalStorage();
 
@@ -19,28 +18,30 @@ getLocalStorage();
 window.onload = function () {
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('product');
-    axios({
-        method: 'get',
-        url: 'https://shop.cyberlearn.vn/api/Product/getbyid?id=' + myParam,
-    }).then(function (result) {
-        let shoe = {
-            id: result.data.content.id,
-            image: result.data.content.image,
-            name: result.data.content.name,
-            size: result.data.content.size,
-            price: result.data.content.price,
-            quantity: 1,
-        }
-        if (dsShoes.arrShoe.every(function (ktraID, index) {
-            return ktraID.id !== shoe.id;
-        })) {
-            dsShoes.addShoe(shoe);
-            setLocalStorage(dsShoes.arrShoe);
-            hienThiSP(dsShoes.arrShoe)
-        }
-    }).catch(function (error) {
-        console.log(error);
-    })
+    if(myParam >0){
+        axios({
+            method: 'get',
+            url: 'https://shop.cyberlearn.vn/api/Product/getbyid?id=' + myParam,
+        }).then(function (result) {
+            let shoe = {
+                id: result.data.content.id,
+                image: result.data.content.image,
+                name: result.data.content.name,
+                size: result.data.content.size,
+                price: result.data.content.price,
+                quantity: 1,
+            }
+            if (dsShoes.arrShoe.every(function (ktraID, index) {
+                return ktraID.id !== shoe.id;
+            })) {
+                dsShoes.addShoe(shoe);
+                setLocalStorage(dsShoes.arrShoe);
+                hienThiSP(dsShoes.arrShoe)
+            }
+        }).catch(function (error) {
+            console.log(error);
+        })
+    }
 }
 //Hiển thị SP =======================================================
 function hienThiSP(mangLocal) {
@@ -154,7 +155,7 @@ function order() {
         return timcheck.checked == true
     })) {
         alert("Thanh toán thành công!")
-        localStorage.removeItem(DSShoe);
+        localStorage.removeItem('DSShoe');
         window.location = "../index.html"
     } else {
         alert("Vui lòng lựa chọn sản phẩm để thanh toán!")

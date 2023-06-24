@@ -34,7 +34,7 @@ const showDetail = (id) => {
                 <button class="btn plusDetail" id="plusDetail">+</button>
             </div>
             <div class="addCartDetail">
-                <button onclick="checkLoginDetail(${shoeDetail.id})">Add to cart</button>
+                <button onclick="addtoCart(${shoeDetail.id})">Add to cart</button>
             </div>
       </div>`
         quantityDetail();
@@ -53,8 +53,8 @@ const showRelateShoes = (array) => {
         for (let i = 0; i < 12; i++) {
             shortDesc += arrDesc[i] + " ";
         }
-        let strShoe = 
-        ` <div class="card-item col-4">
+        let strShoe =
+            ` <div class="card-item col-4">
             <div class="card-item-inner">
             <div class="card-img">
                 <a href="./detail.html?productId=${shoe.id}" onclick="showDetail('${shoe.id}')">
@@ -79,4 +79,39 @@ const showRelateShoes = (array) => {
         content += strShoe;
     })
     document.querySelector('.card-related-list').innerHTML = content;
+}
+const dsShoes = new DanhSachShoes();
+
+function getLocalStorage() {
+    let dataLocal = JSON.parse(localStorage.getItem("DSShoe"));
+    if (dataLocal !== null) {
+        dsShoes.arrShoe = dataLocal;
+    }
+}
+getLocalStorage();
+
+const addtoCart = (id) => {
+    axios({
+        method: 'get',
+        url: 'https://shop.cyberlearn.vn/api/Product/getbyid?id=' + id,
+    }).then(function (result) {
+        let quantityDetail = document.getElementById('quantity').textContent
+        let shoe = {
+            id: result.data.content.id,
+            image: result.data.content.image,
+            name: result.data.content.name,
+            size: result.data.content.size,
+            price: result.data.content.price,
+            quantity: quantityDetail,
+        }
+        if (dsShoes.arrShoe.every(function (ktraID, index) {
+            return ktraID.id !== shoe.id;
+        })) {
+            dsShoes.addShoe(shoe);
+            localStorage.setItem("DSShoe", JSON.stringify(dsShoes.arrShoe));
+            checkCart();
+        }
+    }).catch(function (error) {
+        console.log(error);
+    })
 }

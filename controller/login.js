@@ -164,7 +164,7 @@ const checkLoginIndex = (id) => {
 //Check cart
 const checkCart = () => {
     let checkCart = JSON.parse(localStorage.getItem("DSShoe"));
-    document.getElementById('countCart').innerHTML = checkCart.length
+    document.getElementById('countCart').innerHTML = checkCart.length;
 }
 checkCart();
 document.querySelector('.fa-cart-shopping').addEventListener('click',function(){
@@ -198,6 +198,7 @@ window.addEventListener('load', () => {
 document.getElementById('accept-exit').addEventListener('click', () => {
     $('#modalExit').modal('hide');
     localStorage.removeItem("userLogin");
+    localStorage.removeItem("DSShoe");
     if (window.location.href.includes('view')) {
         window.location = "../index.html"
     } else {

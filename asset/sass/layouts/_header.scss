@@ -42,20 +42,11 @@ header {
         .header-elements {
             .icon-elements {
                 .ip-search {
-                    width: 250px;
+                    width: 200px;
                     position: relative;
                     background-color: #eceff1;
                     margin-right: 20px;
                 }
-
-                #icon-search {
-                    position: absolute;
-                    transform: translateX(220px);
-                    color: $color-dark-2;
-                    font-size: 15px;
-                    cursor: pointer;
-                }
-
                 a {
                     @include styleTagA(none, $color-black, $fs-20);
 

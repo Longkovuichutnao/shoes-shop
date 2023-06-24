@@ -84,8 +84,7 @@ document.getElementById('submit').addEventListener("click",
 
         if (isValid) {
             let user = new User(email, password, name, phone, gender);
-            console.log('tao user', user)
-            // document.getElementById('formUser').reset();
+            document.getElementById('formUser').reset();
             axios({
                 method: 'post',
                 url: 'https://shop.cyberlearn.vn/api/Users/signup',
@@ -164,16 +163,25 @@ const checkLoginIndex = (id) => {
 //Check cart
 const checkCart = () => {
     let checkCart = JSON.parse(localStorage.getItem("DSShoe"));
-    document.getElementById('countCart').innerHTML = checkCart.length
+    if (checkCart !== null) {
+        document.getElementById('countCart').innerHTML = checkCart.length
+        document.getElementById('countCart').classList.add('d-block');
+    }
 }
 checkCart();
-document.querySelector('.fa-cart-shopping').addEventListener('click',function(){
-    if (window.location.href.includes('view')) {
-        window.location = "../view/cart.html"
+
+document.querySelector('.fa-cart-shopping').addEventListener('click', function () {
+    let checkLogin = JSON.parse(localStorage.getItem("userLogin"));
+    if (checkLogin == null) {
+        alert("Đăng nhập để mua sản phẩm!");
     } else {
-        window.location = "./view/cart.html"
+        if (window.location.href.includes('view')) {
+            window.location = "../view/cart.html"
+        } else {
+            window.location = "./view/cart.html"
+        }
     }
-}) 
+})
 
 /**
  * xử lý trường hợp load mà mất acc
@@ -197,7 +205,7 @@ window.addEventListener('load', () => {
  */
 document.getElementById('accept-exit').addEventListener('click', () => {
     $('#modalExit').modal('hide');
-    localStorage.removeItem("userLogin");
+    localStorage.clear();
     if (window.location.href.includes('view')) {
         window.location = "../index.html"
     } else {

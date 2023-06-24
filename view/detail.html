@@ -21,6 +21,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="../asset/css/main.css" />
@@ -40,16 +42,16 @@
                     <!-- title header -->
                     <ul class="d-flex justify-content-between text-center mb-0 row">
                         <li class="col-3">
-                            <a href="#">MEN</a>
+                            <a href="#relaProduct">MEN</a>
                         </li>
                         <li class="col-3">
-                            <a href="#">WOMEN</a>
+                            <a href="#relaProduct">WOMEN</a>
                         </li>
                         <li class="col-3">
-                            <a href="#">KID</a>
+                            <a href="#relaProduct">KID</a>
                         </li>
                         <li class="col-3">
-                            <a href="#">SPORT</a>
+                            <a href="#relaProduct">SPORT</a>
                         </li>
                     </ul>
                 </div>
@@ -58,7 +60,7 @@
                         <!-- icon header -->
                         <input class="form-control ip-search" placeholder="Search" />
                         <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
-                        <i class="fa-solid fa-cart-shopping pr-3" style="cursor: pointer;"><span
+                        <i class="fa-solid fa-cart-shopping pr-3" style="cursor: pointer;"><span class="d-none"
                                 id="countCart"></span></i>
                         <i class="fa-solid fa-solid fa-user-secret d-none"></i>
                         <div class="logIn-header">
@@ -79,16 +81,16 @@
 
 
     <!-- PRODUCT =======================================-->
-    <section class="detailShoes">
+    <section class="detailShoes animate__animated animate__bounceInDown animate__slow">
         <div class="container">
             <div class="row" id="detailShoe">
             </div>
         </div>
     </section>
 
-    <section class="product related-list">
+    <section class="product related-list animate__animated animate__rollIn animate__slower">
         <div class="container">
-            <h3 class="title">RELATED PRODUCT</h3>
+            <h3 id="relaProduct" class="title">RELATED PRODUCT</h3>
             <div class="card-related-list row">
             </div>
         </div>
@@ -210,7 +212,7 @@
 
     <!-- FOOTER ======================================= -->
 
-    <footer class="container">
+    <footer class="container animate__animated animate__fadeInLeft animate__slower animate__delay-4s">
         <div class="footer-top mb-4">
             <div class="footer-content text-center row">
                 <div class="footer-help col-4">
@@ -283,6 +285,13 @@
         </div>
     </footer>
 
+    <!-- BACK TOP ========================================== -->
+    <a href="#" class="backtoTop cd-top text-replace js-cd-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+    <script src="../js/utilBacktoTop.js"></script>
+    <script src="../js/mainBackToTop.js"></script>
+    <!-- BACK TOP ========================================== -->
 
     <!-- Script ========================================== -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -299,6 +308,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
     <script src="../model/Shoes.js"></script>
+    <script src="../model/DanhSachShoes.js"></script>
     <script src="../model/User.js"></script>
     <script src="../model/Validation.js"></script>
     <script src="../controller/login.js"></script>

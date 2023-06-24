@@ -34,3 +34,6 @@ const quantityDetail = () => {
     })
 }
 
+
+
+

@@ -30,7 +30,7 @@
 <body>
     <header>
         <div class="container">
-            <div class="row">
+            <div class="row header-row">
                 <!-- logo -->
                 <div class="col-2 header-logo">
                     <a href="./index.html">
@@ -57,9 +57,9 @@
                 <div class="col-6 d-flex justify-content-center header-elements">
                     <div class="row icon-elements">
                         <!-- icon header -->
-                        <input class="form-control ip-search" placeholder="Search" />
-                        <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
-                        <i class="fa-solid fa-cart-shopping pr-3" style="cursor: pointer;"><span class="d-none" id="countCart"></span></i>
+                        <input class="form-control ip-search" id ="ip-search" placeholder="Search" onkeyup="search()">
+                        <i class="fa-solid fa-magnifying-glass d-none"></i>
+                        <i class="fa-solid fa-cart-shopping pr-3" style="cursor: pointer;"><span class="d-none" id="countCart"></span> </i>
                         <i class="fa-solid fa-solid fa-user-secret d-none" id="icon-login"></i>
                         <div class="logIn-header">
                             <a href="#" class="mx-4 popupLogin" data-toggle="modal" data-target="#modalLogin">Login</a>

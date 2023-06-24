@@ -143,17 +143,10 @@ header .row .title-type .row li:hover::after {
   display: block;
 }
 header .row .header-elements .icon-elements .ip-search {
-  width: 250px;
+  width: 200px;
   position: relative;
   background-color: #eceff1;
   margin-right: 20px;
-}
-header .row .header-elements .icon-elements #icon-search {
-  position: absolute;
-  transform: translateX(220px);
-  color: #121212;
-  font-size: 15px;
-  cursor: pointer;
 }
 header .row .header-elements .icon-elements a {
   color: #000;

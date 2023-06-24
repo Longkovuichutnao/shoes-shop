@@ -48,3 +48,24 @@ function hienThiDanhSach(mang) {
     })
     document.querySelector('.card-list').innerHTML = list;
 };
+
+
+/**
+ * ================== SEARCH FEATURE =======================
+ * function based on onkeyup in input tags to work
+ * when user input somthine in input tags, we can give a search information
+ * after that we need use this information to check in list of shoes,
+ *  we render the list which contains with search information
+ */
+let search = () => {
+    const valueSearch = document.getElementById("ip-search").value.toUpperCase();
+    axios({
+        method: 'get',
+        url: 'https://shop.cyberlearn.vn/api/Product',
+    }).then(function (result) {
+        let listFount = (result.data.content).filter(function (shoes) {
+            return shoes.name.toUpperCase().includes(valueSearch);
+        });
+        hienThiDanhSach(listFount);
+    })
+}

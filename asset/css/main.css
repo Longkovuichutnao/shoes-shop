@@ -32,9 +32,33 @@ html, body {
   border-radius: 0 0 10px;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.125);
+  text-decoration: none;
 }
 .product .btn-buy:hover {
   background-position: right center;
+}
+
+.cart #tableDanhSach .btn-dark {
+  font-size: 12px;
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+.cart #tableDanhSach .btn-dark:hover {
+  opacity: 0.5;
+}
+.cart .myCardFooter .btn-submit {
+  background-image: linear-gradient(to right, #eacda3 0%, #d6ae7b 51%, #eacda3 100%);
+  background-size: 200% auto;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  transition: 0.5s;
+  color: black;
+  font-weight: 600;
+}
+.cart .myCardFooter .btn-submit:hover {
+  background-position: right center;
+  font-size: larger;
+  font-weight: bolder;
 }
 
 #modalLogin .modal-title .row {
@@ -97,17 +121,10 @@ header .row .title-type .row li:hover::after {
   display: block;
 }
 header .row .header-elements .icon-elements .ip-search {
-  width: 250px;
+  width: 200px;
   position: relative;
   background-color: #eceff1;
-  margin-right: 30px;
-}
-header .row .header-elements .icon-elements #icon-search {
-  position: absolute;
-  transform: translateX(220px);
-  color: #121212;
-  font-size: 15px;
-  cursor: pointer;
+  margin-right: 20px;
 }
 header .row .header-elements .icon-elements a {
   color: #000;
@@ -117,9 +134,25 @@ header .row .header-elements .icon-elements a {
 header .row .header-elements .icon-elements a:hover {
   color: rgba(0, 0, 0, 0.603);
 }
-header .row .header-elements .icon-elements .fa-user-secret, header .row .header-elements .icon-elements .fa-cart-shopping, header .row .header-elements .icon-elements .nameLogin {
-  font-size: 18px;
+header .row .header-elements .icon-elements .fa-user-secret,
+header .row .header-elements .icon-elements .fa-cart-shopping,
+header .row .header-elements .icon-elements .nameLogin {
+  font-size: 20px;
   padding-right: 10px;
+}
+header .row .header-elements .icon-elements .fa-cart-shopping {
+  margin-right: 12px;
+  position: relative;
+}
+header .row .header-elements .icon-elements #countCart {
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 18px;
+  background-color: #eacda3;
+  color: black;
+  position: absolute;
+  top: -12px;
+  right: -8px;
 }
 
 .carousel .title-summer-carousel {
@@ -239,6 +272,54 @@ footer .footer-bottom a:hover {
 }
 footer .footer-bottom .content-bottom-left {
   margin-right: 20px;
+}
+
+.cart {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#tableDanhSach .check,
+#tableDanhSach .shoeID,
+#tableDanhSach .shoeIMG,
+#tableDanhSach .shoeName,
+#tableDanhSach .shoeSize,
+#tableDanhSach .shoePrice,
+#tableDanhSach .quantity,
+#tableDanhSach .total {
+  color: #000;
+  font-size: 15px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+#tableDanhSach .quantity span {
+  padding: 0 5px;
+}
+#tableDanhSach .total {
+  font-size: large;
+  font-weight: bolder;
+}
+#tableDanhSach .select {
+  vertical-align: middle;
+}
+#tableDanhSach .select .btn {
+  font-size: 15px;
+}
+
+.myCardFooter {
+  padding-bottom: 50px;
+}
+.myCardFooter .payment {
+  font-weight: 700;
+  position: relative;
+}
+.myCardFooter .payment #total-price {
+  color: rgba(255, 0, 0, 0.8);
+}
+.myCardFooter a {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
 }
 
 #detailShoe {

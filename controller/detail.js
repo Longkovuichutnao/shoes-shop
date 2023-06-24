@@ -34,13 +34,6 @@ const quantityDetail = () => {
     })
 }
 
-<<<<<<< HEAD
-const checkLoginDetail = () => {
-    const checkLocal = localStorage.getItem("userLogin");
-    if (checkLocal == null) {
-        alert("you must login first !");
-    }
-}
-window.checkLoginDetail = checkLoginDetail;
-=======
->>>>>>> e3770a69964ea87047ed0e97509e46d96963edef
+
+
+

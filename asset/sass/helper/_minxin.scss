@@ -21,18 +21,28 @@
 }
 
 //RESPONSIVE MINXIN
-@mixin responsive_320() {
-    @media #{$res_320} {
+// @mixin responsive_320() {
+//     @media #{$res_320} {
+//         @content;
+//     }
+// }
+// @mixin responsive_375() {
+//     @media #{$res_375} {
+//         @content;
+//     }
+// }
+@mixin responsive_min_424() {
+    @media #{$res_min_424} {
         @content;
     }
 }
-@mixin responsive_375() {
-    @media #{$res_375} {
+@mixin responsive_min_576() {
+    @media #{$res_min_576} {
         @content;
     }
 }
-@mixin responsive_425() {
-    @media #{$res_425} {
+@mixin responsive_576() {
+    @media #{$res_576} {
         @content;
     }
 }
@@ -41,13 +51,13 @@
         @content;
     }
 }
-@mixin responsive_992() {
-    @media #{$res_992} {
+@mixin responsive_max_992() {
+    @media #{$res_max_992} {
         @content;
     }
 }
-@mixin responsive_1024() {
-    @media #{$res_1024} {
+@mixin responsive_992() {
+    @media #{$res_992} {
         @content;
     }
 }

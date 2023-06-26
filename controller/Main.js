@@ -20,24 +20,25 @@ function hienThiDanhSach(mang) {
         for (let i = 0; i < 12; i++) {
             shortDesc += arrDesc[i] + " "
         }
-        let getId = shoes.id;
         let shoeInfo = `
-        <div class="card-item col-4">
+        <div class="card-item col-12 col-md-6 col-lg-4">
             <div class="card-item-inner">
             <div class="card-img">
-                <a href="./view/detail.html?productId=${getId}" onclick="showDetail('${getId}')">
+                <a href="./view/detail.html?productId=${shoes.id}">
                     <img class="img-fluid" src= ${shoes.image} alt="">
                 </a>
             </div>
             <div class="card-body">
+                <a href="./view/detail.html?productId=${shoes.id}">
                 <h5 class="shoe-name">${shoes.name}</h5>
+                </a>
                 <p class="shoe-desc">${shortDesc}.......</p>
             </div>
             <div class="card-more d-flex">
                 <div class="btn-price">
                     <div class="price">${shoes.price}$</div>
                 </div>
-                <div onclick="checkLoginIndex(${getId})" class="btn-buy">
+                <div onclick="checkLoginIndex(${shoes.id})" class="btn-buy">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Buy now
                 </div>

@@ -1,31 +1,11 @@
-//chỉnh responsive chung cả web
-//break points
-$breakPoints: (
-    "extra-large" : 1200px,
-    "large" : 992px,
-    "medium" : 768px,
-    "small" : 576px
-);
 
 // RESPONSIVE MOCK
-$res_320 : "only screen and (min-width: 320px) and (max-width: 374px)";
-$res_375 : "only screen and (min-width: 375px) and (max-width: 424px)";
-$res_425 : "only screen and (min-width: 425px) and (max-width: 767px)";
-$res_768 : "only screen and (min-width: 768px) and (max-width: 991px)";
-$res_992 : "only screen and (min-width: 992px) and (max-width: 1023px)";
-$res_1024 : "only screen and (min-width: 1024px) and (max-width: 1999px)";
+// $res_320 : "only screen and (min-width: 320px) and (max-width: 374px)";
+// $res_375 : "only screen and (min-width: 375px) and (max-width: 424px)";
+$res_min_424 : "only screen and (max-width: 424px)";
+$res_min_576 : "only screen and (max-width: 576px)";
+$res_576 : "only screen and (min-width: 576px) and (max-width: 768px)";
+$res_768 : "only screen and (min-width: 768px) and (max-width: 992px)";
+$res_max_992 : "only screen and (max-width: 991px)";
+$res_992 : "only screen and (min-width: 992px) and (max-width: 1199px)";
 $res_1200 : "only screen and (min-width: 1200px)";
-
-
-//RESPONSVIE
-
-//responsive header
-@include responsive_1200 {
-
-}
-
-@include responsive_992 {
-    .header-row {
-        padding: 0 50px;
-    }
-}

@@ -274,6 +274,11 @@ footer .footer-bottom .content-bottom-left {
   margin-right: 20px;
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1023px) {
+  header {
+    display: none;
+  }
+}
 .cart {
   width: 90%;
   margin: 0 auto;

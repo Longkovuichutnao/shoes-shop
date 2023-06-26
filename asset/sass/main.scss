@@ -1,6 +1,5 @@
 //Base
 @import "./base/reset";
-@import "./base/responsive";
 
 //Helper
 @import "./helper/variables";
@@ -15,6 +14,7 @@
 @import "./layouts/carousel";
 @import "./layouts/product";
 @import "./layouts/footer";
+@import "./base/responsive";
 
 //Pages
 @import "./pages/cart";

@@ -16,16 +16,12 @@ $res_992 : "only screen and (min-width: 992px) and (max-width: 1023px)";
 $res_1024 : "only screen and (min-width: 1024px) and (max-width: 1999px)";
 $res_1200 : "only screen and (min-width: 1200px)";
 
-
 //RESPONSVIE
 
 //responsive header
-@include responsive_1200 {
 
-}
-
-@include responsive_992 {
-    .header-row {
-        padding: 0 50px;
+@include responsive_992() {
+    header {
+        display: none;
     }
 }

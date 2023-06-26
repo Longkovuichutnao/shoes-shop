@@ -130,6 +130,11 @@ document.getElementById('login').addEventListener("click",
                 document.querySelector('.exit-acc').classList.add('d-block');
                 document.querySelector('.exit-acc').innerHTML = 'Exit';
 
+                document.querySelector('.popupLogin2').classList.add('d-none');
+                document.querySelector('.info').innerHTML = "<a>Infomation</a>";
+                document.querySelector('.popupRegis2').classList.add('d-none');
+                document.querySelector('.setting').innerHTML = "<a>Setting</a> ";
+
                 let tenEmail = email.split("@");
                 document.querySelector('.nameLogin').innerHTML = ' Hello! ' + tenEmail[0];
 
@@ -185,6 +190,7 @@ document.querySelector('.fa-cart-shopping').addEventListener('click', function (
 
 /**
  * xử lý trường hợp load mà mất acc
+ * Load User
  */
 window.addEventListener('load', () => {
     let checkLogin = JSON.parse(localStorage.getItem("userLogin"));
@@ -196,6 +202,11 @@ window.addEventListener('load', () => {
         document.querySelector('.exit-acc').classList.add('d-block');
         document.querySelector('.nameLogin').innerHTML = ' Hello! ' + checkLogin;
         document.querySelector('.exit-acc').innerHTML = 'Exit';
+
+        document.querySelector('.popupLogin2').classList.add('d-none');
+        document.querySelector('.info').innerHTML = "<a>Infomation</a>";
+        document.querySelector('.popupRegis2').classList.add('d-none');
+        document.querySelector('.setting').innerHTML = "<a>Setting</a> ";
     }
 });
 

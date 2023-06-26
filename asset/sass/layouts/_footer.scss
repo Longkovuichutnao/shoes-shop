@@ -3,40 +3,73 @@ footer {
     box-shadow: 0 5px 10px 0px rgba(100, 100, 111, 0.2);
     padding: 30px 30px 0;
     background-color: #eceff1;
+
     .footer-top {
         h4 {
             font-weight: 700;
         }
+
         li {
             list-style: none;
         }
+
         a {
             @include styleTagA (none, $color-black, 15px);
             transition: all .5s;
+
             &:hover {
                 text-decoration: underline;
             }
         }
+
         .footer-support {
             border-left: 1px solid $color-black;
             border-right: 1px solid $color-black;
             height: 125px;
         }
     }
+
     .footer-bottom {
         color: $color-gray;
         background-color: $color-black;
         height: 50px;
         line-height: 50px;
+
         a {
             @include styleTagA (none, $color-btn-1, 15px);
             transition: all .5s;
+
             &:hover {
                 text-decoration: underline;
             }
         }
+
         .content-bottom-left {
             margin-right: 20px;
+        }
+    }
+
+    @include responsive_max_992 {
+        .content-bottom-left {
+            display: none;
+        }
+    }
+
+    @include responsive_min_576 {
+        .title-get-help h4 {
+            font-size: 15px;
+        }
+
+        .footer-content a {
+            font-size: 13px;
+        }
+
+        .content-bottom-right {
+
+            span,
+            a {
+                font-size: 13px;
+            }
         }
     }
 }

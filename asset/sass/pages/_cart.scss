@@ -1,6 +1,86 @@
 .cart {
     width: 90%;
     margin: 0 auto;
+
+    @include responsive_768 {
+        .shoeID {
+            display: none;
+        }
+
+        #tableDanhSach {
+            .btn-dark {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+        }
+    }
+
+    @include responsive_576 {
+        #tableDanhSach {
+            .btn-dark {
+                font-size: 13px;
+                padding: 2px 8px;
+            }
+
+            .shoeSize,
+            .select,
+            .quantity {
+                padding: 12px 5px;
+            }
+        }
+
+        .total,
+        .shoeID,
+        .shoePrice {
+            display: none;
+        }
+    }
+
+    @include responsive_min_576 {
+        #tableDanhSach {
+            .btn-danger,
+            .btn-dark {
+                font-size: 11px;
+                padding: 2px 4px;
+            }
+
+            .shoeName,
+            .shoeSize,
+            .select,
+            .quantity {
+                padding: 12px 5px;
+            }
+        }
+        .shoeName,
+        .total,
+        .shoeID,
+        .shoePrice {
+            display: none;
+        }
+    }
+    @include responsive_min_424 {
+        #tableDanhSach {
+            .btn-danger,
+            .btn-dark {
+                font-size: 11px;
+                padding: 2px 4px;
+            }
+
+            .shoeName,
+            .shoeSize,
+            .select,
+            .quantity {
+                padding: 12px 5px;
+            }
+        }
+
+        .shoeName,
+        .total,
+        .shoeID,
+        .shoePrice {
+            display: none;
+        }
+    }
 }
 
 #tableDanhSach {
@@ -22,7 +102,6 @@
     }
 
     .total {
-        // color: rgb(255, 187, 0);
         font-size: large;
         font-weight: bolder;
     }
@@ -38,6 +117,7 @@
 
 .myCardFooter {
     padding-bottom: 50px;
+
     .payment {
         font-weight: $fw-7;
         position: relative;
@@ -46,9 +126,11 @@
             color: rgba(255, 0, 0, 0.8);
         }
     }
-    a{
-            position: absolute;
-            bottom: 10px;
-            right: 20px;
+
+    a {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
     }
+
 }

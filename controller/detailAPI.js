@@ -54,7 +54,7 @@ const showRelateShoes = (array) => {
             shortDesc += arrDesc[i] + " ";
         }
         let strShoe =
-            ` <div class="card-item col-4">
+            ` <div class="card-item col-12 col-md-6 col-lg-4">
             <div class="card-item-inner">
             <div class="card-img">
                 <a href="./detail.html?productId=${shoe.id}" onclick="showDetail('${shoe.id}')">
@@ -95,7 +95,7 @@ const addtoCart = (id) => {
         method: 'get',
         url: 'https://shop.cyberlearn.vn/api/Product/getbyid?id=' + id,
     }).then(function (result) {
-        let quantityDetail = document.getElementById('quantity').textContent
+        let quantityDetail = +document.getElementById('quantity').textContent
         let shoe = {
             id: result.data.content.id,
             image: result.data.content.image,

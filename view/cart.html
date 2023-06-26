@@ -88,15 +88,15 @@
             <table class="table table-bordered table-hover myTable">
                 <thead>
                     <tr>
-                        <th><input id="checkAll" onclick="checkAll()" type="checkbox"></th>
-                        <th>ID</th>
+                        <th class="col-1"><input id="checkAll" onclick="checkAll()" type="checkbox"></th>
+                        <th class="col-1 shoeID">ID</th>
                         <th class="col-1">Image</th>
-                        <th class="col-2">Name</th>
-                        <th>Size</th>
-                        <th>Price</th>
-                        <th class="col-lg-2">Quantity</th>
-                        <th>Total</th>
-                        <th class="col-2">Select</th>
+                        <th class="col-1 col-md-2 shoeName">Name</th>
+                        <th class="col-1 shoeSize">Size</th>
+                        <th class="col-1 shoePrice" >Price</th>
+                        <th class="col-1 col-md-2">Quantity</th>
+                        <th class="col-1 total">Total</th>
+                        <th class="col-1 col-sm-2">Select</th>
                     </tr>
                 </thead>
                 <tbody id="tableDanhSach">
@@ -165,11 +165,12 @@
                             <h4>ACCOUNT</h4>
                         </div>
                         <ul>
-                            <li>
-                                <a href="#" class="popupLogin2" >Infomation</a>
+                            <li class="info">
+                                <a href="#" class="popupLogin2" data-toggle="modal" data-target="#modalLogin">Login</a>
                             </li>
-                            <li>
-                                <a href="#" class="popupRegis2">Setting</a>
+                            <li class="setting">
+                                <a href="#" class="popupRegis2" data-toggle="modal"
+                                    data-target="#modalLogin">Register</a>
                             </li>
                         </ul>
                     </div>

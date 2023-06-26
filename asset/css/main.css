@@ -250,6 +250,16 @@ header .row .header-elements .icon-elements #countCart {
   font-size: 15px;
   font-weight: 400;
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .product .btn-buy,
+  .product .btn-price {
+    font-size: 14px;
+  }
+  .product .btn-buy:hover,
+  .product .btn-price:hover {
+    font-size: 16px;
+  }
+}
 
 footer {
   margin-top: 100px;
@@ -295,10 +305,90 @@ footer .footer-bottom a:hover {
 footer .footer-bottom .content-bottom-left {
   margin-right: 20px;
 }
+@media only screen and (max-width: 991px) {
+  footer .content-bottom-left {
+    display: none;
+  }
+}
+@media only screen and (max-width: 576px) {
+  footer .title-get-help h4 {
+    font-size: 15px;
+  }
+  footer .footer-content a {
+    font-size: 13px;
+  }
+  footer .content-bottom-right span,
+  footer .content-bottom-right a {
+    font-size: 13px;
+  }
+}
 
 .cart {
   width: 90%;
   margin: 0 auto;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .cart .shoeID {
+    display: none;
+  }
+  .cart #tableDanhSach .btn-dark {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .cart #tableDanhSach .btn-dark {
+    font-size: 13px;
+    padding: 2px 8px;
+  }
+  .cart #tableDanhSach .shoeSize,
+  .cart #tableDanhSach .select,
+  .cart #tableDanhSach .quantity {
+    padding: 12px 5px;
+  }
+  .cart .total,
+  .cart .shoeID,
+  .cart .shoePrice {
+    display: none;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .cart #tableDanhSach .btn-danger,
+  .cart #tableDanhSach .btn-dark {
+    font-size: 11px;
+    padding: 2px 4px;
+  }
+  .cart #tableDanhSach .shoeName,
+  .cart #tableDanhSach .shoeSize,
+  .cart #tableDanhSach .select,
+  .cart #tableDanhSach .quantity {
+    padding: 12px 5px;
+  }
+  .cart .shoeName,
+  .cart .total,
+  .cart .shoeID,
+  .cart .shoePrice {
+    display: none;
+  }
+}
+@media only screen and (max-width: 424px) {
+  .cart #tableDanhSach .btn-danger,
+  .cart #tableDanhSach .btn-dark {
+    font-size: 11px;
+    padding: 2px 4px;
+  }
+  .cart #tableDanhSach .shoeName,
+  .cart #tableDanhSach .shoeSize,
+  .cart #tableDanhSach .select,
+  .cart #tableDanhSach .quantity {
+    padding: 12px 5px;
+  }
+  .cart .shoeName,
+  .cart .total,
+  .cart .shoeID,
+  .cart .shoePrice {
+    display: none;
+  }
 }
 
 #tableDanhSach .check,
